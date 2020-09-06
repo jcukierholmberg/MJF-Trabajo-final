@@ -1,0 +1,45 @@
+.header { background-color: firebrick;
+}
+
+nav.menu{
+    justify-content: flex-end;
+}
+
+.menu{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.banner {
+     position: absolute; 
+     display: inline-block;
+    /* text-align: center;  */
+    
+
+}
+
+.texto-encima {
+    position: absolute;
+    top: 300px;
+    left: 10px;
+    background-image: url(/MJF-Trabajo-final/Fotos/banner.jpg );
+    ?????????????????????????
+   
+}
+
+
+.pulp {
+    width: 100%;
+    
+}
+
+/* article {
+height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: ;
+  background-size: cover;  
+  background-position: center;
+} */

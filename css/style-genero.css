@@ -1,0 +1,15 @@
+.header {
+    background-color: firebrick;
+}
+
+nav.menu{
+    justify-content: flex-end;
+}
+
+.menu{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
