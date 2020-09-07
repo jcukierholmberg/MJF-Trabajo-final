@@ -1,15 +1,14 @@
-.header { background-color: firebrick;
+.header {
+    background-color: firebrick;
 }
 
-nav.menu{
-    justify-content: flex-end;
-}
 
-.menu{
+#lista {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-right: 10%;
 }
 
 .banner {
@@ -28,12 +27,15 @@ nav.menu{
     ?????????????????????????
    
 }
-
+section.banner{
+    width: 100%;
+}
 
 .pulp {
     width: 100%;
-    
 }
+
+    
 
 /* article {
 height: 100vh;
