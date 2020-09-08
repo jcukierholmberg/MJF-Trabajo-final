@@ -16,7 +16,11 @@
      display: inline-block;
     /* text-align: center;  */
     
+}
 
+h1{
+    text-align: center;
+    gap: 10px;
 }
 
 .texto-encima {
@@ -24,8 +28,6 @@
     top: 300px;
     left: 10px;
     background-image: url(/MJF-Trabajo-final/Fotos/banner.jpg );
-    ?????????????????????????
-   
 }
 section.banner{
     width: 100%;
@@ -36,6 +38,18 @@ section.banner{
 }
 
     
+.menu{
+    border: solid 4px violet;
+    display: grid;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.button{
+    background-color: transparent;
+    border: black solid;
+
+}
 
 /* article {
 height: 100vh;
