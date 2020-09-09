@@ -38,17 +38,19 @@ section.banner{
 }
 
     
-.menu{
-    border: solid 4px violet;
-    display: grid;
-    gap: 20px;
-    font-size: 20px;
-}
+
 
 .button{
     background-color: transparent;
     border: black solid;
 
+}
+
+.menu{
+    border: solid 4px violet;
+    display: grid;
+    gap: 20px;
+    font-size: 20px;
 }
 
 /* article {
