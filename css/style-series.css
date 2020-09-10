@@ -1,0 +1,9 @@
+
+.kill-bill{
+    display: flex;
+    flex-direction:row;
+}
+
+.infopeli {
+    margin-left: 50px;
+}
