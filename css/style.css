@@ -1,5 +1,11 @@
+body { 
+    background-color: rgb(239, 239, 239);
+    margin: 0%;
+}
+
+
 .header {
-    background-color: firebrick;
+    background-color: rgb(213, 166, 189);
 }
 
 
@@ -11,12 +17,15 @@
     margin-right: 10%;
 }
 
-.banner {
-     position: absolute; 
-     display: inline-block;
-    /* text-align: center;  */
-    
+.segundomenu{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 10%;
 }
+    
+
 
 h1{
     text-align: center;
@@ -37,13 +46,22 @@ section.banner{
     width: 100%;
 }
 
+.verpelicula {
+    position: absolute;
+    top: 450px;
+    left: 10px;
+    background-image: url(/MJF-Trabajo-final/Fotos/banner.jpg );
+   
+}
+
+
     
 
 
 .button{
     background-color: transparent;
     border: black solid;
-
+   
 }
 
 .menu{
@@ -52,6 +70,20 @@ section.banner{
     gap: 20px;
     font-size: 20px;
 }
+.menudos{
+    border: solid 4px violet;
+    display: grid;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.listapeliculas {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 
 /* article {
 height: 100vh;
