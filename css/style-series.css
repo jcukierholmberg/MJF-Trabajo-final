@@ -1,4 +1,8 @@
 
+body {
+    background-color: rgb(213, 166, 189);
+}
+
 .kill-bill{
     display: flex;
     flex-direction:row;
@@ -6,4 +10,46 @@
 
 .infopeli {
     margin-left: 50px;
+}
+
+.listacapitulos {
+    display: flex;
+}
+
+.capitulo1 {
+    border: solid 1px grey;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.capitulo2 {
+    border: solid 1px grey;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+
+.capitulo3 {
+    border: solid 1px grey;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+
+.capitulo4 {
+    border: solid 1px grey;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+
+.capitulo5 {
+    border: solid 1px grey;
+    align-content: center;
+    align-items: center;
+    align-self: center;
 }

@@ -8,3 +8,7 @@
 .infopeli {
     margin-left: 50px;
 }
+
+.listacapitulos {
+    display: flex;
+}

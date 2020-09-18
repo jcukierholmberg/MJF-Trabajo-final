@@ -26,7 +26,6 @@ body {
 }
     
 
-
 h1{
     text-align: center;
     gap: 10px;
@@ -55,9 +54,6 @@ section.banner{
 }
 
 
-    
-
-
 .button{
     background-color: transparent;
     border: black solid;
@@ -71,7 +67,7 @@ section.banner{
     font-size: 20px;
 }
 .menudos{
-    border: solid 4px violet;
+    border: solid 4px lightcoral;
     display: grid;
     gap: 20px;
     font-size: 20px;
