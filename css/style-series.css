@@ -1,4 +1,4 @@
-
+*{ box-sizing: border-box;}
 body {
     background-color: rgb(213, 166, 189);
 }
@@ -14,42 +14,32 @@ body {
 
 .listacapitulos {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 650px;
 }
 
-.capitulo1 {
+.capitulo:hover {
+    background-color: lightgoldenrodyellow;
+    padding: 8px;
+    border: black solid 3px;
+}
+
+.capitulo {
     border: solid 1px grey;
     align-content: center;
     align-items: center;
     align-self: center;
+    width: 30%;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.8s;
 }
 
-.capitulo2 {
-    border: solid 1px grey;
-    align-content: center;
-    align-items: center;
-    align-self: center;
+.capitulo img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
-
-.capitulo3 {
-    border: solid 1px grey;
-    align-content: center;
-    align-items: center;
-    align-self: center;
-}
-
-
-.capitulo4 {
-    border: solid 1px grey;
-    align-content: center;
-    align-items: center;
-    align-self: center;
-}
-
-
-.capitulo5 {
-    border: solid 1px grey;
-    align-content: center;
-    align-items: center;
-    align-self: center;
-}
