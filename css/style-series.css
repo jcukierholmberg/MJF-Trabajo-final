@@ -43,3 +43,15 @@ body {
     object-fit: cover;
 }
 
+
+h5{
+    text-align: right;
+}
+
+p{
+    text-align: justify;
+}
+
+/* h4{
+    text-align: right;
+} */
