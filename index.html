@@ -6,54 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moviemundo</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 
 <body>
-    <header class="header">
+    <!-- <header class="header">
         
-        <h1 style=  font-size:50px;  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Moviemundo </h1>
+        <h1 style=  font-size:50px;>  Moviemundo </h1>
 
         <nav class="menu">
 
             <ul id="lista">
-                <li type="none"> <a href="Genero.html" > Genero </a> </li>
-                <li type="none"> <a href="" > Peliculas </a> </li>
-                <li type="none"> <a href="series.html"> Series </a> </li>
-                <li type="none"> <a href=" "> Documentales </a> </li>
+                <li type="none"> <a class="pag-actual" style="text-decoration: none;" href=""> <strong> INICIO </strong> </a> </li>
+                <li type="none"> <a style="text-decoration: none;" href="Genero.html" > GENERO </a> </li>
+                <li type="none"> <a style="text-decoration: none;" href="" > PELICULAS </a> </li>
+                <li type="none"> <a style="text-decoration: none;" href="series.html"> SERIES </a> </li>
+                <li type="none"> <a style="text-decoration: none;" href=" "> MI LISTA </a> </li>
                 <button style="width: 80px; height: 30px; background-color: transparent; border: solid black;"> Buscar... </button>
             </ul>
     
         </nav>
     
-    </header>
+    </header> -->
 
     <!-- Banner -->
 
-     <section class="banner">
+    <section class="banner">
 
 
-    <!--Carousel peliculas cuando sepa java-->
+     <!--Carousel peliculas cuando sepa java-->
 
 
-    <div class="carousel-container">
+        <div class="carousel-container">
             
-        <div class="banner movimiento"> 
-                <img class="pulp" src="Fotos/banner.jpg" alt="Portada de la pelicula Pulp Fiction"> </a>
-         </div>
+            <div class="banner movimiento"> 
+                    <img class="pulp" src="Fotos/banner.jpg" alt="Portada de la pelicula Pulp Fiction"> </a>
+            </div>
         
-    </div>
+        </div>
+        <div class="menu-encima">
+            <header class="header">
+        
+                <h1 style=  font-size:50px;>  Moviemundo </h1>
+        
+                <nav class="menu">
+        
+                    <ul id="lista">
+                        <li type="none"> <a class="pag-actual" style="text-decoration: none;" href=""> <strong> INICIO </strong> </a> </li>
+                        <li type="none"> <a style="text-decoration: none;" href="Genero.html" > GENERO </a> </li>
+                        <li type="none"> <a style="text-decoration: none;" href="" > PELICULAS </a> </li>
+                        <li type="none"> <a style="text-decoration: none;" href="series.html"> SERIES </a> </li>
+                        <li type="none"> <a style="text-decoration: none;" href=" "> MI LISTA </a> </li>
+                        <button style="width: 80px; height: 30px; background-color: transparent; border: solid black;"> Buscar... </button>
+                    </ul>
+            
+                </nav>
+            
+            </header>
 
-         <div class="texto-encima" style="color: white; font-size: 50px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Pulp Fiction    
-         </div> 
+        </div>
+
+        <div class="texto-encima" style="color: white; font-size: 50px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Pulp Fiction    
+        </div> 
              
             
-        <a href="pelicula.html"> <button class="verpelicula" style="cursor: pointer;"> <i class="far fa-play-circle fa-6x" ></i> </button> </a> 
+        <a href="pelicula.html"> 
+            <button class="verpelicula" style="cursor: pointer;"> <i class="far fa-play-circle fa-6x" ></i> 
+            </button> 
+        </a> 
      
     </section>
     
 
-        <nav class="menudos">
+    <nav class="menudos">
        <ul class="segundomenu">  
             <li type="none"> <a href=""> Peliculas online</a> </li>
             <li type="none"> <a href=""> Estrenos</a> </li>
@@ -62,36 +87,36 @@
             <li type="none"> <a href=""> Mas vistas </a> </li>
         </ul>
 
-        </nav>
+    </nav>
 
     <Section class="peliculashorizontal">
         <ul class="listapeliculas">
         
-        <li type="none" class="pelicula"> 
-            <a href="pelicula.html">  <img src="Fotos/el padrino.jpeg" alt="El padrino"></a>
-        </li>
+            <li type="none" class="pelicula"> 
+                <a href="pelicula.html">  <img src="Fotos/el padrino.jpeg" alt="El padrino"></a>
+            </li>
 
-        <li type="none" class="pelicula"> 
-            <a href="pelicula.html">  <img src="Fotos/Gatsby.jpeg " alt= "Gatsby" > </a> 
-        </li>
+            <li type="none" class="pelicula"> 
+                <a href="pelicula.html">  <img src="Fotos/Gatsby.jpeg " alt= "Gatsby" > </a> 
+            </li>
 
-        <li type="none" class="pelicula"> 
-            <a href="pelicula.html">  <img src="Fotos/kill bill.jpeg" alt="Kill bill"></a>
-        </li>
+            <li type="none" class="pelicula"> 
+                <a href="pelicula.html">  <img src="Fotos/kill bill.jpeg" alt="Kill bill"></a>
+            </li>
 
-        <li type="none" class="pelicula"> 
-                <a href="pelicula.html">  <img src="Fotos/reservoir dog.jpeg" alt="Reservoir dogs"></a>
+            <li type="none" class="pelicula"> 
+                    <a href="pelicula.html">  <img src="Fotos/reservoir dog.jpeg" alt="Reservoir dogs"></a>
 
-        </li>
+            </li>
         
         </ul>
 
-     <ul class="listaseries">
-        <li type="none"> 
-            <a href="series.html">  <img src="Fotos/The punisher.jpg" alt="The punisher"></a>
-        </li>
+        <ul class="listaseries">
+            <li type="none"> 
+                <a href="series.html">  <img src="Fotos/The punisher.jpg" alt="The punisher"></a>
+            </li>
 
-     </ul>
+        </ul>
     </Section>
 
 

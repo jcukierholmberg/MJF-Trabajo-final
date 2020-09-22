@@ -1,13 +1,33 @@
-body { 
-    background-color: rgb(239, 239, 239);
+*{ 
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    cursor: pointer;
+    color: white;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #fff;
+}
+
+body {
+    background-color: rgb(213, 166, 189);
     margin: 0%;
 }
 
-
 .header {
-    background-color: rgb(213, 166, 189);
+    /* background-color: #292929;
+    box-shadow: inset -18px -51px 120px 0px rgba(61,9,61,1); */
+    box-shadow: inset 0px 69px 43px -42px rgba(28,28,28,0.86);
 }
 
+
+.pag-actual {
+    font-size: 25px;
+
+}
 
 #lista {
     display: flex;
@@ -16,6 +36,8 @@ body {
     justify-content: space-between;
     margin-right: 10%;
 }
+
+
 
 .segundomenu{
     display: flex;
@@ -29,6 +51,7 @@ body {
 h1{
     text-align: center;
     gap: 10px;
+    color: white;
 }
 
 .texto-encima {
@@ -37,6 +60,13 @@ h1{
     left: 10px;
     background-image: url(/MJF-Trabajo-final/Fotos/banner.jpg );
 }
+
+.menu-encima{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
 section.banner{
     width: 100%;
     position: relative;
@@ -63,13 +93,11 @@ section.banner{
 }
 
 .menu{
-    border: solid 4px violet;
     display: grid;
     gap: 20px;
     font-size: 20px;
 }
 .menudos{
-    border: solid 4px lightcoral;
     display: grid;
     gap: 20px;
     font-size: 20px;
