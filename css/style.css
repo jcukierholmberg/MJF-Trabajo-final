@@ -95,4 +95,12 @@ section.banner{
     transform: scale(1.3); 
 }
 
-    
+.verpelicula{
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.vertical{
+    box-sizing: border-box;
+}
