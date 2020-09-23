@@ -10,6 +10,7 @@ body {
 h1 {
    color: white;
    text-align: center;
+   margin: 0%;
 }
 
 a {
@@ -37,8 +38,9 @@ nav.menu {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: 10%;
+    justify-content: space-around;
+    padding: 0%;
+    align-items: center;
 }
 
 .pag-actual {
@@ -51,6 +53,22 @@ nav.menu {
     justify-content: space-between;
     align-items: center;
     height: 650px;
+}
+
+.contenedor-pelicula {
+    position: relative;
+
+}
+
+.contenedor-pelicula:hover .center{
+display: inline-block!important;
+
+}
+.center {
+position: absolute;
+top: 30%;
+left: 35%;
+display: none!important;
 }
 
 .accion {

@@ -34,8 +34,9 @@ body {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: 10%;
+    justify-content: space-around;
+    padding: 0%;
+    align-items: center;
 }
 
 
@@ -53,6 +54,7 @@ h1{
     text-align: center;
     gap: 10px;
     color: white;
+    margin: 0%;
 }
 
 .contenedor-infopelicula{
@@ -123,7 +125,7 @@ section.banner{
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -167,7 +169,7 @@ section.banner{
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
