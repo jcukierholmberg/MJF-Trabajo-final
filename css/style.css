@@ -24,6 +24,12 @@ body {
     margin-top: 0%;
 }
 
+.iniciobuscador{
+    width: 80px; 
+    height: 30px; 
+    background-color: burlywood; 
+    border: solid white
+}
 
 .pag-actual {
     font-size: 25px;
@@ -55,6 +61,11 @@ h1{
     gap: 10px;
     color: white;
     margin: 0%;
+    font-size: 50px;
+}
+
+h2{
+    color: white;
 }
 
 .contenedor-infopelicula{

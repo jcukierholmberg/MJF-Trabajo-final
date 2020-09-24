@@ -22,6 +22,7 @@ h1 {
     color: white;
     text-align: center;
     margin: 0%;
+    font-size: 50px;
  }
 
 #lista {
@@ -32,8 +33,11 @@ h1 {
     margin-right: 10%;
 }
 
-.button{
-    style="width: 80px; height: 30px; background-color: transparent; border: solid black;"
+.seriesbuscador{
+    width: 80px; 
+    height: 30px; 
+    background-color: burlywood; 
+    border: solid white
 }
 
 body {
@@ -46,8 +50,6 @@ nav.menu {
 
 .pag-actual {
     font-size: 25px;
-    
-
 }
 
 .kill-bill{
@@ -64,7 +66,8 @@ nav.menu {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 380px;
+    height: 580px;
+    width: fit-content;
 }
 
 .capitulo:hover {
