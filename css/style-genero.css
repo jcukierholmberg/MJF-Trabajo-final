@@ -29,13 +29,20 @@ a:hover {
     box-shadow: inset -18px -51px 120px 0px rgba(61,9,61,1); */
     background-color:#1c1c1c;
     margin-top: 0%;
-
 }
-.generobuscador{
-    width: 80px; 
-    height: 30px; 
-    background-color: burlywood; 
-    border: solid white
+
+.sinsubrayar {
+    text-decoration: none;
+}
+
+.buscador{
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    text-decoration: none; 
+    position: absolute;
+    top: 8%;
+    right: 4%;
 }
 
 nav.menu {
@@ -56,11 +63,11 @@ nav.menu {
 }
 
 .generos {
+    font-size: 150%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 650px;
 }
 
 .contenedor-pelicula {
@@ -70,43 +77,65 @@ nav.menu {
 
 .contenedor-pelicula:hover .center{
 display: inline-block!important;
-
+transition: all .10s ease-in-out; 
+cursor: pointer;
 }
+
+.contenedor-pelicula:hover{
+    transition: all .2s ease-in-out; 
+    transform: scale(1.5); 
+    cursor: pointer;
+    box-shadow: 0px 0px 24px 3px rgba(28,28,28,1);
+    z-index: 999;
+}
+
+
 .center {
 position: absolute;
 top: 30%;
 left: 35%;
 display: none!important;
+color: white;
 }
 
 .accion {
     display: grid;
     grid-template-columns: repeat(7,1fr);
     column-gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .comedia {
     display: grid;
     grid-template-columns: repeat(7,1fr);
     column-gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .terror {
     display: grid;
     grid-template-columns: repeat(7,1fr);
     column-gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .romance {
     display: grid;
     grid-template-columns: repeat(7,1fr);
     column-gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .documentales {
     display: grid;
     grid-template-columns: repeat(7,1fr);
     column-gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .foto {
@@ -114,12 +143,22 @@ display: none!important;
     border-radius: 8px;
 }
 
-.foto:hover {
-    /* background-color: rgb(213, 166, 189); */
-    /* padding: 8px; */
+/* .foto:hover {
     transition: all .2s ease-in-out; 
     transform: scale(1.5); 
     cursor: pointer;
     box-shadow: 0px 0px 24px 3px rgba(28,28,28,1);
+} */
+
+footer{
+    padding: 15px;
+    background-color:#1c1c1c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
 }
 
+.footer {
+    text-align: start;
+    cursor: pointer;
+}

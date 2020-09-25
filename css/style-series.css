@@ -33,11 +33,14 @@ h1 {
     margin-right: 10%;
 }
 
-.seriesbuscador{
-    width: 80px; 
-    height: 30px; 
-    background-color: burlywood; 
-    border: solid white
+.buscador{
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    text-decoration: none; 
+    position: absolute;
+    top: 8%;
+    right: 4%; 
 }
 
 body {
@@ -113,6 +116,15 @@ p{
     text-align: justify;
 }
 
-/* h4{
-    text-align: right;
-} */
+footer{
+    padding: 15px;
+    background-color:#1c1c1c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+}
+
+.footer {
+    text-align: start;
+    cursor: pointer;
+}

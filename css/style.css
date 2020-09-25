@@ -24,11 +24,14 @@ body {
     margin-top: 0%;
 }
 
-.iniciobuscador{
-    width: 80px; 
-    height: 30px; 
-    background-color: burlywood; 
-    border: solid white
+.buscador{
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    text-decoration: none; 
+    position: absolute;
+    top: 8%;
+    right: 4%; 
 }
 
 .pag-actual {
@@ -238,4 +241,17 @@ section.banner{
     margin-right: 10px;
     padding-left: 10px;
 
+}
+
+footer{
+    padding: 15px;
+    background-color:#1c1c1c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+}
+
+.footer {
+    text-align: start;
+    cursor: pointer;
 }
