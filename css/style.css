@@ -35,10 +35,6 @@ body {
     right: 4%; 
 }
 
-/* .pag-actual {
-    font-size: 25px;
-
-} */
 
 #lista {
     display: flex;
@@ -96,17 +92,14 @@ h2{
 }
 
 .masinfo{
-    margin-left: 6%;
-    margin-top: 70%;
-    position:absolute;
-    top: 80px; 
+    margin: 6%; 
 }
 
 
 .menu-encima{
     position: absolute;
-    top: 10px;
     width: 100%;
+    top: 0%;
 }
 
 section.banner{
