@@ -91,3 +91,16 @@ img{
     height: 150px;
     border-radius: 8px;
 }
+
+footer{
+    padding: 15px;
+    background-color:black
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+}
+
+.footer {
+    text-align: start;
+    cursor: pointer;
+}

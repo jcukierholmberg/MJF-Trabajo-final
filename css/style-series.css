@@ -118,7 +118,7 @@ p{
 
 footer{
     padding: 15px;
-    background-color:#1c1c1c;
+    background-color:black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: white;
