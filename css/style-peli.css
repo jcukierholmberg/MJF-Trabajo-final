@@ -94,7 +94,7 @@ img{
 
 footer{
     padding: 15px;
-    background-color:black
+    background-color:black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: white;
