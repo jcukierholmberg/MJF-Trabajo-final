@@ -164,6 +164,21 @@ footer{
     cursor: pointer;
 }
 
+
+.fab{
+display: inline;
+padding: 10px;
+cursor: pointer;
+}
+
+.logos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+}
+
+
+
 @media (max-width:320px) {
     .accion .comedia .terror .documentales .romance {
 grid-template-columns: 1fr 1fr 1fr; }
