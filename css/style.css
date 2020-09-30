@@ -217,6 +217,7 @@ section.banner{
 
 .series-corte{
     padding: 15px;
+    background-color: black;
 }
 
 .contenedor-series:hover{
@@ -290,3 +291,8 @@ footer{
     display: flex;
     flex-wrap: wrap;
     }
+
+.volverarriba{
+    display: inline;
+    justify-content: end;
+}
