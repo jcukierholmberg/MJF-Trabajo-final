@@ -74,6 +74,7 @@ h1{
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0;
+    text-decoration: none
 }
 
 h2{
@@ -115,9 +116,6 @@ h2{
 }
 
 
-.menu-encima{
- 
-}
 
 .banner{
     background: url('../Fotos/banner-peliculas/glowbanner.jpg');

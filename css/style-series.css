@@ -140,9 +140,32 @@ footer{
     cursor: pointer;
 }
 
-@media(max-width:1200px){
-    .capitulo {
-        grid-template-columns: repeat(4,1fr);
+
+
+@media(max-width:650px){
+    h1 {
+        font-size: 40px;
+        padding: 2%;
+    }
+    .toggle-menu{
+        display: block;
+    }
+    .menu{
+        display:none;
+    }
+    .banner {
+        margin-top: 50px;
+    }
+
+    .kill-bill{
+        margin-top: 100px;
+    }
+    .capitulos{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .infopeli{
+        flex-direction: column;
     }
 }
 
+   
