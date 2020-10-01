@@ -2,6 +2,11 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+body {
+    background-color: #5A1D57;
+    
+}
+
 a {
     cursor: pointer;
     color: white;
@@ -12,15 +17,12 @@ a:hover {
 }
 
 .header {
-    /* background-color: #292929;
-    box-shadow: inset -18px -51px 120px 0px rgba(61,9,61,1); */
-    background-color:#1c1c1c;
+    box-shadow: inset 0px 76px 63px 22px black;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 999;
-
 }
 
 h1 {
@@ -34,9 +36,9 @@ h1 {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-right: 10%;
+    justify-content: space-around; 
 }
+
 .toggle-menu{
     display: none;
     position: absolute;
@@ -52,9 +54,7 @@ h1 {
     text-decoration: none; 
 }
 
-body {
-    background-color: rgb(213, 166, 189);
-}
+
 
 nav.menu {
     font-size: 18px;
@@ -139,3 +139,10 @@ footer{
     text-align: start;
     cursor: pointer;
 }
+
+@media(max-width:1200px){
+    .capitulo {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
