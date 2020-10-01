@@ -106,7 +106,7 @@ nav.menu {
     width: 30%;
     padding: 10px;
     border-radius: 8px;
-    transition: all 0.8s;
+    transition: all 0.5s;
     height: 173px;
     overflow: hidden;
 }
@@ -166,6 +166,10 @@ footer{
     }
     .infopeli{
         flex-direction: column;
+    }
+    .listacapitulos{
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
 
