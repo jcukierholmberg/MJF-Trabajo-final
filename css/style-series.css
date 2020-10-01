@@ -39,6 +39,10 @@ h1 {
 }
 .toggle-menu{
     display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
 }
 
 .buscador{

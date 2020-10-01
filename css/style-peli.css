@@ -44,7 +44,13 @@ h1 {
     /*margin-right: 10%;*/
     padding: 0px;
 }
-
+.toggle-menu{
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+}
 .buscador{
     padding: 10px;
     border: 1px solid white;
