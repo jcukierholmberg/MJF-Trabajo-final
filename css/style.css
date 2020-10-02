@@ -286,12 +286,12 @@ footer{
     padding: 10px;
     cursor: pointer;
     font-size: xx-large;
-    }
+}
     
 .logos{
     display: flex;
     flex-wrap: wrap;
-    }
+}
 
 .volverarriba{
     display: inline;
@@ -325,5 +325,27 @@ footer{
     }
     .segundomenu li {
         margin-bottom: 10px;
+    }
+    .contenedor-series:hover{
+        background-color:rgb(213, 166, 189);
+        transition: all .05s ease-in-out; 
+        box-shadow: 0px 0px 40px -7px rgba(0,0,0,1);
+        transform: scale(1);
+        cursor: pointer; 
+        height: 150px;
+        padding: 2px;
+        align-content: center;
+        border-radius: 25px;
+    }
+    .contenedor-pelicula:hover {
+        background-color:rgb(213, 166, 189);
+        transition: all .05s ease-in-out; 
+        box-shadow: 0px 0px 40px -7px rgba(0,0,0,1);
+        transform: scale(1);
+        cursor: pointer; 
+        height: 150px;
+        padding: 2px;
+        align-content: center;
+        border-radius: 25px;
     }
 }

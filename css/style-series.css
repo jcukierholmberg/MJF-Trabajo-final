@@ -26,6 +26,13 @@ a:hover {
     z-index: 999;
 }
 
+h3 {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
 h1 {
     color: white;
     text-align: center;
@@ -73,6 +80,7 @@ nav.menu {
 
 .infopeli {
     margin-left: 50px;
+    color: white;
 }
 
 .listacapitulos {
@@ -94,6 +102,7 @@ nav.menu {
     height: 400px;
 
 }
+
 
 .capitulo {
     border: solid 1px grey;
@@ -136,7 +145,12 @@ footer{
     cursor: pointer;
 }
 
-
+.fab{
+    display: inline;
+    padding: 10px;
+    cursor: pointer;
+    font-size: xx-large;
+}
 
 @media(max-width:650px){
     h1 {
@@ -160,6 +174,7 @@ footer{
     .listacapitulos{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        overflow: scroll;
     }
 
     .infopeli{
@@ -169,6 +184,19 @@ footer{
         flex-wrap: wrap;
         align-items: center;
     }
+    .capitulo{
+        width: 100%;
+    }
+    .capitulo:hover{
+    background-color:rgb(213, 166, 189);
+    padding: 8px;
+    transition: all .2s ease-in-out; 
+    box-shadow: 0px 0px 40px -7px rgba(0,0,0,1);
+    transform: scale(1);
+    cursor: pointer; 
+    height: 173px;
+    }
+
 
 }
 
@@ -177,12 +205,22 @@ footer{
     .no-mobile { display: none;
     }
 
-    .listacapitulos {
+    .listacapitulos{
         display: grid;
         grid-template-columns: 1fr;
+        overflow: scroll;
     }
 
     .portada {
         width: 50vw;
     }
+    .capitulo:hover{
+        background-color:rgb(213, 166, 189);
+        padding: 8px;
+        transition: all .2s ease-in-out; 
+        box-shadow: 0px 0px 40px -7px rgba(0,0,0,1);
+        transform: scale(1);
+        cursor: pointer; 
+        height: 173px;
+        }
 }

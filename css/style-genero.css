@@ -180,6 +180,13 @@ cursor: pointer;
     align-items: left;
 }
 
+.fab{
+    display: inline;
+    padding: 10px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
 @media(max-width:1200px){
     .accion, .comedia, .terror, .romance, .documentales{
         grid-template-columns: repeat(4,1fr);
@@ -219,6 +226,8 @@ cursor: pointer;
         grid-template-columns: repeat(2,1fr);
     }
 }
+
+
 
 @media (max-width:480px) {
     .accion, 

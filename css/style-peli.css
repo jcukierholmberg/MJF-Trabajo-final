@@ -84,6 +84,7 @@ nav.menu {
 
 .infopeli {
     margin-left: 50px;
+    color: white;
 }
 
 
@@ -127,6 +128,13 @@ footer{
     cursor: pointer;
 }
 
+.fab{
+    display: inline;
+    padding: 10px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
 @media(max-width:1200px){
     .accion, .comedia, .terror, .romance, .documentales{
         grid-template-columns: repeat(4,1fr);
@@ -149,6 +157,15 @@ footer{
         margin-top: 100px;
         
     }
+    .contenedor-pelicula:hover{
+        transition: all .2s ease-in-out; 
+        transform: scale(1); 
+        cursor: pointer;
+    }
+    .far{
+        display: none;
+    }
+    
     
     /* .infopelicula{
         max-width: 60%;
