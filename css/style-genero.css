@@ -52,7 +52,7 @@ h1 {
     align-items: center;
 }
 
-a.menu.uno {
+.none-decoration {
     text-decoration: none;
 }
 
@@ -66,8 +66,6 @@ a.menu.uno {
 nav.menu {
     font-size: 18px;
 }
-
-
 
 .pag-actual {
     font-size: 25px;
