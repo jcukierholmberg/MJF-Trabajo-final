@@ -1,6 +1,4 @@
-/* peli */
-
-*{ box-sizing: border-box;
+*{  box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -136,8 +134,9 @@ footer{
 }
 
 @media(max-width:1200px){
-    .accion, .comedia, .terror, .romance, .documentales{
+    .otraspelis{
         grid-template-columns: repeat(4,1fr);
+
     }
 }
 
@@ -165,23 +164,7 @@ footer{
     .far{
         display: none;
     }
-    
-    
-    /* .infopelicula{
-        max-width: 60%;
-    }
-    .verpelicula{
-        left:auto;
-        right: 0;
-    } */
-    /* .segundomenu{
-        flex-direction: column;
-        align-items: center;
-    } */
-    /* .segundomenu li {
-        margin-bottom: 10px;
-    } */
-    
+
     .otraspelis{
         grid-template-columns: repeat(2,1fr);
 
