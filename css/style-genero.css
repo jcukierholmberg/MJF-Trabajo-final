@@ -157,7 +157,7 @@ footer{
     padding: 15px;
     background-color:black;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     color: white;
 }
 
@@ -166,16 +166,23 @@ footer{
     cursor: pointer;
 }
 
-.fab{
-display: inline;
-padding: 10px;
-cursor: pointer;
+.footer:hover{
+    filter: brightness(50%);
+    
 }
-
+  
 .logos{
     display: flex;
     flex-wrap: wrap;
-    align-items: left;
+    display: inline-block;
+}
+
+.redes { 
+    display: inline-block;
+}
+
+.integrantes {
+    display: inline-block;
 }
 
 .fab{
