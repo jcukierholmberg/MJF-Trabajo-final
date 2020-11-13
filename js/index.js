@@ -12,6 +12,27 @@ else if (mensaje == "no") {
 let media = "movie"
 let url= `https://api.themoviedb.org/3/trending/${media}/day?api_key=4aafc89b60967c61ce5438ca044af061`
 
+
+//Esto es para sacar el ID para cada pelicula//
+
+//1 Obtener la querystring//
+
+let queryString = location.search;
+console.log(queryString)
+
+//2 Transformarla en un objeto literal//
+
+let queryObject = new URLSearchParams(queryString)
+console.log(queryObject)
+
+//3 Obtener el dato para completar el endpoint//
+
+let id = queryObject.get('id');
+console.log(id)
+
+
+
+
 fetch(url)
     .then(function(respuesta){
         return respuesta.json()
@@ -27,7 +48,7 @@ fetch(url)
         for(let i=0; i<10; i++){   
             destino.innerHTML += `<div class="contenedor-series">
                                     <p type="none" class="pelicula"> 
-                                    <a href="series.html">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                    <a href="series.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
                                     </p>
                                     <h4> ${info[i].title} </h4>
                                     <h5> 145 min</h5>
