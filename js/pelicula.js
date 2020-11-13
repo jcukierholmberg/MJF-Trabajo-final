@@ -15,9 +15,9 @@ console.log(queryObject)
 let id = queryObject.get('id');
 console.log(id)
 
-let apiKey = 4aafc89b60967c61ce5438ca044af061
+let apiKey = "4aafc89b60967c61ce5438ca044af061"
 
-let url = 'https://api.themoviedb.org/3/movie/${id}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US'
+let url = "https://api.themoviedb.org/3/movie/${id}?api_key=apiKey&language=en-US"
 
 fetch(url)
     .then(function(respuesta){
@@ -25,12 +25,18 @@ fetch(url)
     })
     .then(function(data){
         console.log(data)
+
+    let info = data.results
+
+    let destino = document.querySelector('.infopeli');
  
    //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
-   destino.innerHTML += ''
+   //destino.innerHTML += ''//
 
- 
-   
+   destino.innerHTML +=      
+
+     
+            
 
         }
         
