@@ -17,7 +17,7 @@ console.log(id)
 
 let apiKey = 4aafc89b60967c61ce5438ca044af061
 
-let url = 
+let url = 'https://api.themoviedb.org/3/movie/${id}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US'
 
 fetch(url)
     .then(function(respuesta){
@@ -26,8 +26,10 @@ fetch(url)
     .then(function(data){
         console.log(data)
  
-   //Aca ponemos un for y ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
-   for 
+   //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
+   destino.innerHTML += ''
+
+ 
    
 
         }
