@@ -19,6 +19,8 @@ let apiKey = "4aafc89b60967c61ce5438ca044af061"
 
 let url = "https://api.themoviedb.org/3/movie/${id}?api_key=apiKey&language=en-US"
 
+let destino = document.querySelector('.infopeli');
+
 fetch(url)
     .then(function(respuesta){
         return respuesta.json()
@@ -28,12 +30,22 @@ fetch(url)
 
     let info = data.results
 
-    let destino = document.querySelector('.infopeli');
+    
  
    //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
    //destino.innerHTML += ''//
+    
+   destino.innerHTML +=  `<div class="infopeli">
+   <h2> KILL BILL </h2>
 
-   destino.innerHTML +=      
+   <p class="no-mobile">Una asesina embarazada, cuyo nombre en código es La novia, entra en coma durante cuatro años después de que su exjefe Bill la ataca brutalmente. Cuando se despierta, se propone vengarse de él y sus asociados.</p>
+
+   <ul class="no-mobile" type= "circle">
+       <li class= "director" >Director: Quentin Tarantino</li>
+       <li>Género: Acción, Película de violación y venganza, Artes marciales y cine gore</li>
+       <li>Actores: Uma Thurman, David Carradine, Lucy Liu, Vivica A. Fox, Michael Madsen, Daryl Hannah, Gordo Liu, Julie Dreyfus</li>
+   </ul>
+   </div>`    
 
      
             
