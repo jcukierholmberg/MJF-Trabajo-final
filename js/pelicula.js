@@ -36,7 +36,7 @@ fetch(url)
    //destino.innerHTML += ''//
     
    destino.innerHTML +=  `<div class="infopeli">
-   <h2> KILL BILL </h2>
+   <h2> ${info.title} </h2>
 
    <p class="no-mobile">Una asesina embarazada, cuyo nombre en código es La novia, entra en coma durante cuatro años después de que su exjefe Bill la ataca brutalmente. Cuando se despierta, se propone vengarse de él y sus asociados.</p>
 
