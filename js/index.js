@@ -1,16 +1,4 @@
 
-// Lo pongo en verde asi no jode cada vez que abrimos la pagina//
-
-// //bienvenidos a sitio//
-// let mensaje = prompt("¿Tienes una cuenta?")
-
-// if (mensaje == "si" ) {
-//     alert ("Bienvenido al sitio 'nombre de la persona'")
-// }
-// else if (mensaje == "no") {
-//     alert ("Create una cuenta gratuita");
-// }
-
 //URL//
 let media = "movie"
 let url= `https://api.themoviedb.org/3/trending/${media}/day?api_key=4aafc89b60967c61ce5438ca044af061`
