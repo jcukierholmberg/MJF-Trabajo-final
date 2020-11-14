@@ -1,17 +1,20 @@
 
 //bienvenidos a sitio//
 
-let mensaje = prompt ("Tenes una cuenta?")
+let mensaje = prompt ("Tenes creada una cuenta?")
 
 //Cambiar para que no sea un texto sino que sea un coso de opciones//
 
 if (mensaje == "si" ) {
     alert ("apreta ok para iniciar sesión");
 
-    window.location.href = "formulario.html";
+    //mandarlo a la pagina de Inicio de sesion//
+
 }
 
 else if (mensaje == "no" )
 {
-    alert ("Create una cuenta gratuita haciendo click en 'Iniciar Sesion'");
+    alert ("apreta ok para crearte una cuenta");
+
+    window.location.href = "formulario.html";
 }
