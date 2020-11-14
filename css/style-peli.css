@@ -73,9 +73,7 @@ nav.menu {
     font-size: 18px;
 }
 
-.pag-actual {
-    font-size: 25px;
-}
+
 
 .kill-bill{
     display: flex;
@@ -213,3 +211,14 @@ footer{
 }
 
 }
+
+/* CSS para favoritas*/
+
+.titulofavs {
+    margin-top: 150px;
+}
+
+.grupo {
+    display: inline-block;
+}
+

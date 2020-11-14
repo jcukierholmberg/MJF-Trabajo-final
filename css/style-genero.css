@@ -67,9 +67,7 @@ nav.menu {
     font-size: 18px;
 }
 
-.pag-actual {
-    font-size: 25px;
-}
+
 
 .generos {
     font-size: 150%;
@@ -181,7 +179,7 @@ footer{
     display: inline-block;
 }
 
-.integrantes {
+.grupo {
     display: inline-block;
 }
 

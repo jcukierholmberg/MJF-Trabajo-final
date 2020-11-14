@@ -68,9 +68,7 @@ nav.menu {
     padding: 0px;
 }
 
-.pag-actual {
-    font-size: 25px;
-}
+
 
 .kill-bill{
     display: flex;
@@ -162,7 +160,7 @@ footer{
     display: inline-block;
 }
 
-.integrantes {
+.grupo{
     display: inline-block;
 }
 
