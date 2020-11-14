@@ -74,3 +74,16 @@ nav.menu {
 }
 
 
+/* css de Formulario */
+
+.beneficios {
+    color: white;
+    margin-left: 25px;
+    margin-top: 150px;
+}
+.datos{
+    color: white;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
