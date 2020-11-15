@@ -19,9 +19,20 @@ a {
 }
 
 .container {
+    margin-top: 80px !important;
     width: 100% !important;
     padding: 0% !important;
 }
+
+.carousel-inner{
+    height: 400px;
+}
+
+.fotobanner {
+ 
+    overflow: hidden;
+}
+
 
 a:hover {
     text-shadow: 0 0 10px #fff;
@@ -233,7 +244,6 @@ h2{
 }
 
 .pelicula{
-    width: 150px;
     padding: 5px;
 }
 
