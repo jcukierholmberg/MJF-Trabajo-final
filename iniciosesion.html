@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <style>
         body {font-family: Arial, Helvetica, sans-serif;}
         
@@ -130,9 +131,13 @@
 </head>
 <body>
 
-<h2 class= "click" >HAGA CLICK EN EL BOTON PARA INCIAR SESIÓN</h2>
+<a class= "back" href="index.html" target="_blank"> <i class="fas fa-arrow-left"></i> </a> 
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<h2 class= "click" >HAGA CLICK EN EL BOTON PARA INCIAR SESIÓN. SI NO TENES CUENTA, HAGA CLICK EN CREAR CUENTA</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> Iniciar sesion </button>
+
+<a href="formulario.html"> <button> Crear Cuenta </button>  </a>
 
 <div id="id01" class="modal">
   
@@ -143,20 +148,20 @@
     </div>
 
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="uname"><b>Usuario</b></label>
+      <input type="text" placeholder="Ingrese su usuario" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw"><b>Contraseña</b></label>
+      <input type="password" placeholder="Ingres su contraseña" name="psw" required>
         
       <button type="submit">Login</button>
       <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <input type="checkbox" checked="checked" name="remember"> Acordarse de mi contraseña
       </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
     </div>
   </form>
 </div>
