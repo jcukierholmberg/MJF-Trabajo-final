@@ -18,3 +18,9 @@ else if (mensaje == "no" )
 
     window.location.href = "formulario.html";
 }
+
+<form action="" method="GET">
+<input type="text" name="nombre del usuario"></input>
+
+
+</form>
