@@ -16,6 +16,6 @@ else if (mensaje == "no" )
 {
     alert ("apreta 'ok' para crearte una cuenta");
 
-    window.location.href = "formulario.html";
+    window.location.href = "iniciosesion.html";
 }
 
