@@ -169,12 +169,19 @@
 <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">CREAR CUENTA</button>
 
 <div id="id02" class="modal">
+
   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
   <form class="modal-content" action="/action_page.php">
+
     <div class="container">
+
       <h1>CREAR CUENTA</h1>
+
       <p>Pofavor llene los datos para crear su cuenta</p>
+
       <hr>
+
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Ingrese su Email" name="email" required>
 
@@ -185,14 +192,18 @@
       <input type="password" placeholder="Vuelva a ingresar su contraseña" name="psw-repeat" required>
       
       <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Acordarse de mi Usuario
+
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Acordarse de mi Usuario 
+      
       </label>
 
-      <p>Al crearse una cuenta, accepta nuestras <a href="#" style="color:dodgerblue">Bases y condiciones</a>.</p>
+      <p>Al crearse una cuenta, accepta nuestras <a href="" style="color:dodgerblue">Bases y condiciones</a>.</p>
 
       <div class="clearfix">
+
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
         <button type="submit" class="signupbtn">Crear cuenta</button>
+
       </div>
     </div>
   </form>
@@ -210,7 +221,7 @@ window.onclick = function(event) {
 }
 
 // Get the modal
-var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {

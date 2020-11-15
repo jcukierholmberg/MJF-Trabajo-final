@@ -4,13 +4,23 @@
 }
 
 body {
-    background-color: #5A1D57;
+    background-color: #5A1D57 !important;
     margin: 0%;
+}
+
+
+h1 {
+    color: white !important;
 }
 
 a {
     cursor: pointer;
-    color: white;
+    color: white !important;
+}
+
+.container {
+    width: 100% !important;
+    padding: 0% !important;
 }
 
 a:hover {
@@ -121,16 +131,21 @@ h2{
 
 
 
-.banner{
-    background: url('../Fotos/banner-peliculas/glowbanner.jpg');
+/* .banner{
+    /* background: url('../Fotos/banner-peliculas/glowbanner.jpg'); */
     width: 100%;
     position: relative;
     padding: 8% 5% 10% 10%;
     margin-top: 80px;
     background-repeat: no-repeat;
     background-size: cover;  
-}
+} */
 
+.banner{
+
+    margin-top: 100px;
+
+}
 .pulp {
     width: 100%;
 }
