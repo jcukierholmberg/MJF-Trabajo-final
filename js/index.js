@@ -10,6 +10,7 @@ fetch(url)
     .then(function(respuesta){
         return respuesta.json()
     })
+    
     .then(function(data){
         console.log(data)
         // consguir la información
