@@ -35,7 +35,6 @@ fetch(url)
         console.log(error);
 })
 
-let mediaseries = "tv"
 
 let urlseries = `https://api.themoviedb.org/3/tv/popular?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
 
@@ -62,7 +61,7 @@ fetch(urlseries)
                                   </div>`
 
         }
-        
+       
     })
     .catch( function(error){
         console.log(error);
