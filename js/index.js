@@ -36,9 +36,9 @@ fetch(url)
 })
 
 
+let urlseries = "https://api.themoviedb.org/3/tv/{tv_id}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US"
 
-
-fetch(url)
+fetch(urlseries)
     .then(function(respuesta){
         return respuesta.json()
     })
