@@ -76,7 +76,9 @@ nav.menu {
     margin-top: 150px;
 }
 
-.infopeli {
+
+
+.infoseries {
     margin-left: 50px;
     color: white;
 }
@@ -231,7 +233,7 @@ footer{
     }
 
     .portada {
-        width: 50vw;
+        width: 300px;
     }
     .capitulo:hover{
         background-color:rgb(213, 166, 189);

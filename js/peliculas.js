@@ -35,7 +35,12 @@ fetch(url)
 
     //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
    {
-   destino.innerHTML +=  `<div class="infopeli">
+   destino.innerHTML +=  `
+                        <div class="fotokillbill">
+                            <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
+                        </div>  
+
+                        <div class="infopeli">
                         <h2> ${info.title} </h2>
 
                         <p class="no-mobile">${info.overview}</p>

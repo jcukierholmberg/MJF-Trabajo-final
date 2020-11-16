@@ -54,7 +54,7 @@ fetch(urlseries)
         for(let i=0; i<10; i++){   
             destino.innerHTML += `<div class="contenedor-pelicula">
                                     <p type="none" class="serie"> 
-                                    <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].name}"></a>
+                                    <a href="series.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].name}"></a>
                                     </p>
                                     <h4> ${info[i].name} </h4>
                                     <h5> 145 min</h5>
