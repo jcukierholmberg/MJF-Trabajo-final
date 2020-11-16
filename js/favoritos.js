@@ -8,6 +8,8 @@ let mensaje = prompt ("Tenes creada una cuenta?")
 if (mensaje == "si" ) {
     alert ("apreta 'ok' para ir a iniciar sesión");
 
+    window.location.href = "iniciosesion.html"
+
     //mandarlo a la pagina de Inicio de sesion//
 
 }

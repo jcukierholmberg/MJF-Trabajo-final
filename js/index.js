@@ -35,8 +35,9 @@ fetch(url)
         console.log(error);
 })
 
+let mediaseries = "tv"
 
-let urlseries = "https://api.themoviedb.org/3/tv/{tv_id}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US"
+let urlseries = `https://api.themoviedb.org/3/tv/popular?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
 
 fetch(urlseries)
     .then(function(respuesta){
@@ -54,9 +55,9 @@ fetch(urlseries)
         for(let i=0; i<10; i++){   
             destino.innerHTML += `<div class="contenedor-pelicula">
                                     <p type="none" class="serie"> 
-                                    <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                    <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].name}"></a>
                                     </p>
-                                    <h4> ${info[i].title} </h4>
+                                    <h4> ${info[i].name} </h4>
                                     <h5> 145 min</h5>
                                   </div>`
 
