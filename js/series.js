@@ -38,7 +38,7 @@ fetch(url)
    destino.innerHTML +=  `<div class="infopeli">
                         <h2> ${info.title} </h2>
 
-                        <p class="no-mobile">Una asesina embarazada, cuyo nombre en código es La novia, entra en coma durante cuatro años después de que su exjefe Bill la ataca brutalmente. Cuando se despierta, se propone vengarse de él y sus asociados.</p>
+                        <p class="no-mobile">${info.overview}</p>
 
                         <ul class="no-mobile" type= "circle">
                             <li class= "director" >Director: Quentin Tarantino</li>
