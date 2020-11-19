@@ -62,3 +62,34 @@ fetch(url)
     .catch( function(error){
         console.log(error);
     }) 
+
+
+let urlSimilares = 
+
+    fetch(urlSimilares)
+    .then(function(respuesta){
+        return respuesta.json()
+    })
+
+    .then(function(data){
+        console.log(data)
+
+    let info = data;
+
+    let destino = document.querySelector('.otraspelis');
+
+    //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
+   {
+   destino.innerHTML +=  `<div class="contenedor-pelicula">
+                             <img class="foto" src="./Fotos/generos/terror/2.jpg" alt="Man of medan"width="100%">
+                        </div>`    
+
+     
+            
+
+        }
+        
+    })
+    .catch( function(error){
+        console.log(error);
+    }) 
