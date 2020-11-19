@@ -71,5 +71,37 @@ fetch(urlseries)
 })
 
 
+let urlUpcoming = `https://api.themoviedb.org/3/movie/upcoming?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
+
+fetch(urlUpcoming)
+    .then(function(respuesta){
+        return respuesta.json()
+    })
+    
+    .then(function(data){
+        console.log(data)
+        // consguir la información
+        let info = data.results;
+        //Capturar el destino a donde insertaremos los bloques de cada peli.
+        let destino = document.querySelector('.listarecomendados');
+
+        //recorrer el array y por cada posición del array tenemos que crear un bloque de pelicula en html
+        for(let i=0; i<10; i++){   
+                        destino.innerHTML += `<div class="contenedor-pelicula">
+                                            <li type="none" class="pelicula"> 
+                                                <a href="pelicula.html">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                            </li>
+                                                <h4>${info[i].title}</h4>
+                                                <h5> Puntuación: ${info[i].vote_average} </h5>
+                                                <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
+                                            </div>`
+
+        }
+        
+    })
+    .catch( function(error){
+        console.log(error);
+})
+
 
 
