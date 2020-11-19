@@ -40,6 +40,14 @@ h1 {
     font-size: 20px;
 }
 
+
+
+.titulo {
+    font-size: xx-large;
+}
+
+
+
 #lista {
     display: flex;
     flex-direction:row;
@@ -47,6 +55,8 @@ h1 {
     justify-content: space-around;
     padding: 0px;
 }
+
+
 
 .none-decoration {
     text-decoration: none;

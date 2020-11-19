@@ -41,15 +41,14 @@ fetch(urlseries)
 
                             <div class="infoseries">
                             <div >
-                                <h2> ${info.name} </h2>
+                                <a class= "titulo"> ${info.name} </a>
+
+                                <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a>
+
+                                <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
 
                                 <p class="no-mobile"> ${info.overview} </p>
 
-                                <ul class="no-mobile" type= "circle">
-                                    <li>Director: Cindy Holland</li>
-                                    <li>Genero: Programas basados en cómics, Thrillers de TV, Programas de EE.UU.</li>
-                                    <li>Actores: Jon bernthal, Ben Barnes, Amber Rose Revah</li>
-                                </ul>
                             </div>
                             </div>
                         `    

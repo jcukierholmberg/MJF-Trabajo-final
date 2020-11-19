@@ -25,7 +25,9 @@ fetch(url)
                                     <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
                                     </p>
                                     <h4> ${info[i].title} </h4>
-                                    <h5> 145 min</h5>
+                                    <h5> Puntuación: ${info[i].vote_average}</h5>
+                                    <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
+                                     
                                   </div>`
 
         }
@@ -57,7 +59,8 @@ fetch(urlseries)
                                     <a href="series.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].name}"></a>
                                     </p>
                                     <h4> ${info[i].name} </h4>
-                                    <h5> 145 min</h5>
+                                    <h5> Puntuación: ${info[i].vote_average} </h5>
+                                    <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
                                   </div>`
 
         }

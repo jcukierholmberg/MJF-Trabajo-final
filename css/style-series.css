@@ -26,6 +26,17 @@ a:hover {
     z-index: 999;
 }
 
+.titulo {
+    font-size: xx-large;
+}
+
+
+.duracion{
+    display: block;
+    margin-top: 10px;
+    
+}
+
 h3 {
     background-color: black;
     padding: 10px;

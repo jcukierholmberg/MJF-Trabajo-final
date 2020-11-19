@@ -41,15 +41,16 @@ fetch(url)
                         </div>  
 
                         <div class="infopeli">
-                        <h2> ${info.title} </h2>
+                        <a class= "titulo" > ${info.title}</h2> </a>
+
+                        <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a>
+
+                        <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
+
+                        <a class= "duracion" > Duración: ${info.runtime} min </a>
 
                         <p class="no-mobile">${info.overview}</p>
 
-                        <ul class="no-mobile" type= "circle">
-                            <li class= "director" >Director: Quentin Tarantino</li>
-                            <li>Género: Acción, Película de violación y venganza, Artes marciales y cine gore</li>
-                            <li>Actores: Uma Thurman, David Carradine, Lucy Liu, Vivica A. Fox, Michael Madsen, Daryl Hannah, Gordo Liu, Julie Dreyfus</li>
-                        </ul>
                         </div>`    
 
      
