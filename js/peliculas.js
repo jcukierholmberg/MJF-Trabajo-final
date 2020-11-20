@@ -64,7 +64,7 @@ fetch(url)
     }) 
 
 
-let urlSimilares = 
+let urlSimilares = `https://api.themoviedb.org/3/movie/similar/${id}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
 
     fetch(urlSimilares)
     .then(function(respuesta){
@@ -79,15 +79,14 @@ let urlSimilares =
     let destino = document.querySelector('.otraspelis');
 
     //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
-   {
-   destino.innerHTML +=  `<div class="contenedor-pelicula">
-                             <img class="foto" src="./Fotos/generos/terror/2.jpg" alt="Man of medan"width="100%">
-                        </div>`    
+    for(let i=0; i<10; i++){   
+        destino.innerHTML += `<div class="contenedor-pelicula">
+                                    <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                    <h1> ${info[i].title} </h1>
+                                    <img class="foto" src="./Fotos/generos/terror/2.jpg" alt="${info[i].title}"width="100%">
+                                </div>`
 
-     
-            
-
-        }
+    }
         
     })
     .catch( function(error){
