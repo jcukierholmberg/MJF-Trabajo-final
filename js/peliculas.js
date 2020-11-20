@@ -77,7 +77,8 @@ fetch(url)
                                 </div>`
 
     }
-        
+   
+
     })
     .catch( function(error){
         console.log(error);
