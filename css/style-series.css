@@ -31,6 +31,9 @@ a:hover {
     margin-left: 40px;
 }
 
+img {
+    height: 390px;
+}
 .titulo {
     font-size: xx-large;
     display: inline;
