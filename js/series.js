@@ -1,25 +1,17 @@
 //Esto es para sacar el ID para cada pelicula o serie//
-
 //1 Obtener la querystring//
-
 let queryString = location.search;
 // console.log(queryString);
 
 //2 Transformarla en un objeto literal//
-
 let queryObject = new URLSearchParams(queryString);
 console.log(queryObject);
 
 //3 Obtener el dato para completar el endpoint//
-
 let id = queryObject.get('id');
 console.log(id);
 
-
-
 let urlseries = `https://api.themoviedb.org/3/tv/${id}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
-
-
 
 fetch(urlseries)
     .then(function(respuesta){
@@ -29,7 +21,7 @@ fetch(urlseries)
         console.log(data)
         let info = data;
         let sesasonsContainer = document.querySelector('.seasons')
-        let seasons = data.number_of_seasons
+        let seasons = data.seasons
         let capitulos = data.number_of_episodes
         let destino = document.querySelector('.infoseries');
 
@@ -42,44 +34,15 @@ fetch(urlseries)
                                     <p class="no-mobile"> ${info.overview} </p>
                                 </div>`   
                                 
-        for (let i=0; i<seasons; i++) {
+        for (let i=0; i<seasons.length; i++) {
             //pasar numero de temporada//
-            sesasonsContainer.innerHTML += `<h3>Temporada ${i+1}</h3>`
-           
-
-            for (let j=0; j<data.seasons[i].episode_count; j++) {
-                let urlCapitulos = `https://api.themoviedb.org/3/tv/${id}/season/${i+1}/episode/${j+1}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
-
-                fetch(urlCapitulos)
-                    .then(function(respuesta){
-                        return respuesta.json()
-                    })
-                    
-                    .then(function(data){
-                        console.log(data)
-                        let info = data;
-                
-                        sesasonsContainer.innerHTML += `<div class="capitulo">
-                                            <img src="https://image.tmdb.org/t/p/w500/" alt="${data.name}">
-                                            <h4>${data.name}</h4>
-                                        
-                                            <h5>${data.episode_number}</h5>
-                                            <p>${data.overview}</p>
-                                            </div>`
-
-                    
-                    })
-                    .catch( function(error){
-                        console.log(error);
-                    })
-
-            }
-
+            sesasonsContainer.innerHTML += `<h3>${seasons[i].name}</h3>
+                                            <p>${seasons[i].overview}</p>
+                                            <a class="episodes" href="capitulos.html?id=${id}&season=${seasons[i].season_number}&episodesCount=${seasons[i].episode_count}"> Ver capítulos</a>` 
         }
+
         
     })
     .catch( function(error){
         console.log(error);
     }) 
-
-
