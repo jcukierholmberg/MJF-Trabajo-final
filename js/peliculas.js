@@ -34,7 +34,7 @@ fetch(url)
     let destino = document.querySelector('.infopeli');
 
     //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
-   {
+   
    destino.innerHTML +=  `
                         <div class="fotokillbill">
                             <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
@@ -52,38 +52,28 @@ fetch(url)
                         <p class="no-mobile">${info.overview}</p>
 
                         </div>`    
-
-     
-            
-
-        }
         
-    })
-    .catch( function(error){
-        console.log(error);
-    }) 
-
-
-let urlSimilares = `https://api.themoviedb.org/3/movie/similar/${id}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
+                        let urlSimilares = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
 
     fetch(urlSimilares)
     .then(function(respuesta){
         return respuesta.json()
     })
 
-    .then(function(data){
-        console.log(data)
+    .then(function(recomendados){
+       console.log(recomendados);
 
-    let info = data;
 
     let destino = document.querySelector('.otraspelis');
 
     //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
-    for(let i=0; i<10; i++){   
+    for(let i=0; i<7; i++){   
         destino.innerHTML += `<div class="contenedor-pelicula">
-                                    <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
-                                    <h1> ${info[i].title} </h1>
-                                    <img class="foto" src="./Fotos/generos/terror/2.jpg" alt="${info[i].title}"width="100%">
+                                    <a href="pelicula.html?id=${recomendados.results[i].id}"> 
+                                     <img class="foto" src="http://image.tmdb.org/t/p/w500/${recomendados.results[i].poster_path}" alt="${recomendados.results[i].title}"></a>
+                                    <h4> ${recomendados.results[i].title} </h4>
+                        
+
                                 </div>`
 
     }
@@ -92,3 +82,9 @@ let urlSimilares = `https://api.themoviedb.org/3/movie/similar/${id}?api_key=4aa
     .catch( function(error){
         console.log(error);
     }) 
+
+    })
+    .catch( function(error){
+        console.log(error);
+    }) 
+
