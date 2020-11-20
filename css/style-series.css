@@ -26,8 +26,14 @@ a:hover {
     z-index: 999;
 }
 
+
+.informacionseries{
+    margin-left: 40px;
+}
+
 .titulo {
     font-size: xx-large;
+    display: inline;
 }
 
 
@@ -92,6 +98,7 @@ nav.menu {
 .infoseries {
     /*margin-left: 50px;*/
     color: white;
+    display: inline-flex;
 }
 
 .listacapitulos {

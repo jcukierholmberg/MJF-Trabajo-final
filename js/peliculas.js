@@ -36,22 +36,26 @@ fetch(url)
     //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
    
    destino.innerHTML +=  `
-                        <div class="fotokillbill">
-                            <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
-                        </div>  
+                        
+                    
+                        <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
+                        
+                        <div class= "informacionpelicula" >
 
-                        <div class="infopeli">
-                        <a class= "titulo" > ${info.title}</h2> </a>
+                        <h2 class= "titulo" > ${info.title} </h2> 
 
-                        <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a>
-
+                        <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a> 
+                    
                         <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
 
                         <a class= "duracion" > Duración: ${info.runtime} min </a>
 
                         <p class="no-mobile">${info.overview}</p>
 
-                        </div>`    
+                        </div>
+                       
+
+                        `    
         
                         let urlSimilares = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
 
@@ -96,4 +100,27 @@ fetch(url)
 
 
 
-    
+    `
+                        <div class="fotokillbill">
+                            <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
+                        </div>  
+
+                        <div class="infopeli">
+
+                        <h2 class= "titulo" > ${info.title}  <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a> </h2> 
+
+                        
+                        
+                        </div>
+
+                        <div class = "restoinfo" >
+
+                        <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
+
+                        <a class= "duracion" > Duración: ${info.runtime} min </a>
+
+                        <p class="no-mobile">${info.overview}</p>
+
+                        </div>
+
+                        </div>`  

@@ -40,12 +40,24 @@ h1 {
     font-size: 20px;
 }
 
-
+.informacionpelicula{
+    margin-left: 40px;
+}
 
 .titulo {
     font-size: xx-large;
+    margin-top: 0;
+    display: inline;
 }
 
+.estrella {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.restoinfo{
+    display: inline;
+}
 
 
 #lista {
@@ -92,8 +104,10 @@ nav.menu {
 }
 
 .infopeli {
+    display: inline-flex;
     margin-left: 50px;
     color: white;
+    
 }
 
 
