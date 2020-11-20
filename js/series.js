@@ -50,8 +50,40 @@ fetch(urlseries)
                                 <p class="no-mobile"> ${info.overview} </p>
 
                             
-                            </div>
-                        `    
+                            </div
+                            `   
+                            
+
+                        let urlcapitulos = `https://api.themoviedb.org/3/tv/${id}/season/1/episode/{episode_number}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
+
+                        fetch(urlcapitulos)
+                                .then(function(respuesta){
+                                    return respuesta.json()
+                                })
+                                
+                                .then(function(data){
+                                    console.log(data)
+                                    // consguir la información
+                                    let info = data.results;
+                                    //Capturar el destino a donde insertaremos los bloques de cada peli.
+                                    let destino = document.querySelector('.capitulos');
+                            
+                                    //recorrer el array y por cada posición del array tenemos que crear un bloque de pelicula en html
+                                    for(let i=0; i<15; i++){   
+                                        destino.innerHTML += `<div class="capitulo">
+                                                            <img src="https://image.tmdb.org/t/p/w500/${info[i].still_path}" alt="${info[i].name}">
+                                                            <h4>${info[i].name}</h4>
+                                                        
+                                                            <h5>${info[i].episode_number}</h5>
+                                                            <p>${info[i].overview}</p>
+                                                            </div>`
+                            
+                                    }
+                                   
+                                })
+                                .catch( function(error){
+                                    console.log(error);
+                        })
 
         }
         
@@ -61,33 +93,3 @@ fetch(urlseries)
     }) 
 
 
-// let urlcapitulos = `https://api.themoviedb.org/3/tv/${id}/season/1/episode/{episode_number}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
-
-// fetch(urlcapitulos)
-//         .then(function(respuesta){
-//             return respuesta.json()
-//         })
-        
-//         .then(function(data){
-//             console.log(data)
-//             // consguir la información
-//             let info = data.results;
-//             //Capturar el destino a donde insertaremos los bloques de cada peli.
-//             let destino = document.querySelector('.capitulos');
-    
-//             //recorrer el array y por cada posición del array tenemos que crear un bloque de pelicula en html
-//             for(let i=0; i<15; i++){   
-//                 destino.innerHTML += `<div class="capitulo">
-//                                     <img src="https://image.tmdb.org/t/p/w500/${info.still_path}" alt="${info.name}">
-//                                     <h4>${info.name}</h4>
-                                
-//                                     <h5>${info.episode_number}</h5>
-//                                     <p>${info.overview}</p>
-//                                     </div>`
-    
-//             }
-           
-//         })
-//         .catch( function(error){
-//             console.log(error);
-// })
