@@ -362,7 +362,7 @@ footer{
         display:none;
     }
     .banner {
-        margin-top: 50px;
+        display: none
     }
     .infopelicula{
         max-width: 60%;
@@ -372,8 +372,13 @@ footer{
         right: 0;
     }
     .segundomenu{
-        flex-direction: column;
-        align-items: center;
+        display: none;
+        /* flex-direction: column;
+        align-items: center; */
+    }
+
+    .series-corte{
+        margin-top: 100px;
     }
     .segundomenu li {
         margin-bottom: 10px;
@@ -400,5 +405,7 @@ footer{
         align-content: center;
         border-radius: 25px;
     }
+
+  
 }
 
