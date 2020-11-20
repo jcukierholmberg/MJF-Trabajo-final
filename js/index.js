@@ -89,7 +89,7 @@ fetch(urlUpcoming)
         for(let i=0; i<10; i++){   
                         destino.innerHTML += `<div class="contenedor-pelicula">
                                             <li type="none" class="pelicula"> 
-                                                <a href="pelicula.html">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                                <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
                                             </li>
                                                 <h4>${info[i].title}</h4>
                                                 <h5> Puntuación: ${info[i].vote_average} </h5>
