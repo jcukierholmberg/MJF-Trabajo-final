@@ -13,6 +13,13 @@ body {
     margin-top: 10px;
     margin-left: 20px;
 }
+
+.logotmdb {
+    position: initial;
+    margin-left: 515px;
+    margin-bottom: 100px;
+}
+
 h1 {
     color: white !important;
 }
