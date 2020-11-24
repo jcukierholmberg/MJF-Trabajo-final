@@ -40,7 +40,7 @@ fetch(urlseries)
             //pasar numero de temporada//
             sesasonsContainer.innerHTML += `<h3>${seasons[i].name}</h3>
                                             <p>${seasons[i].overview}</p>
-                                            <a class="episodes" href="capitulos.html?id=${id}&season=${seasons[i].season_number}&episodesCount=${seasons[i].episode_count}"> Ver capítulos</a>` 
+                                            <a class="episodes" href="temporadas.html?id=${id}&season=${seasons[i].season_number}&episodesCount=${seasons[i].episode_count}"> Ver capítulos</a>` 
         }
 
         

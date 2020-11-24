@@ -72,8 +72,9 @@ fetch(url)
     let destino = document.querySelector('.otraspelis');
 
     //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
-   if(recomendados.results.length !=0){
-
+   
+    if (recomendados.results.length !=0){
+   
     for(let i=0; i<7; i++){   
         destino.innerHTML += `<div class="contenedor-pelicula">
                                     <a href="pelicula.html?id=${recomendados.results[i].id}"> 
