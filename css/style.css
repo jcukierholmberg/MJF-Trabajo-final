@@ -33,6 +33,7 @@ a {
     margin-top: 80px !important;
     width: 100% !important;
     padding: 0% !important;
+    min-height: 400px;
 }
 
 .carousel-inner{
