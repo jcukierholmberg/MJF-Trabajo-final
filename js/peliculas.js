@@ -29,6 +29,7 @@ fetch(url)
     .then(function(data){
         console.log(data)
 
+
     let info = data;
 
     let destino = document.querySelector('.infopeli');
