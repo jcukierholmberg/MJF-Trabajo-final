@@ -11,9 +11,17 @@ console.log(queryObject);
 let id = queryObject.get('id');
 console.log(id);
 
+let season= queryObject.get('season');
+console.log(season);
+
+let episodesCount = queryObject.get('episodesCount');
+console.log(episodesCount);
 
 
-let url= `https://api.themoviedb.org/3/tv/${id}/season/${season}/episode/1?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
+
+for (let i=1; i<=episodesCount; i++) {
+
+let url= `https://api.themoviedb.org/3/tv/${id}/season/${season}/episode/${i}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
 
 fetch(url)
     .then(function(respuesta){
@@ -30,7 +38,7 @@ fetch(url)
         //recorrer el array y por cada posición del array tenemos que crear un bloque de pelicula en html
         for(let i=0; i<10; i++){   
             destino.innerHTML += `<div class="contenedor-episodios">
-                                    <h1> ${episode_number} </h1>
+                                    <h1> ${i} </h1>
                                   </div>`
 
         }
@@ -39,3 +47,4 @@ fetch(url)
     .catch( function(error){
         console.log(error);
 })
+}
