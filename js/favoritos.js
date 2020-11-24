@@ -21,3 +21,16 @@ else if (mensaje == "no" )
     window.location.href = "iniciosesion.html";
 }
 
+const query = location.search
+const queryString = new URLSearchParams(query)
+const idMovie = queryString.get("id")
+
+
+const storage =localStorage.getItem ("favoritos")
+console.log(storage);
+
+if (storage == null) {
+    localStorage.setItem("favoritos" , "")
+} 
+
+container = document.querySelector(".favoritos")
