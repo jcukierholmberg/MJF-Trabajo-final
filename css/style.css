@@ -14,11 +14,6 @@ body {
     margin-left: 40px;
 }
 
-/* .logotmdb {
-    position: initial;
-    margin-left: 515px;
-    margin-bottom: 100px;
-} */
 
 h1 {
     color: white !important;
@@ -319,18 +314,11 @@ h2{
 
 }
 
-.fab{
-    display: inline;
-    padding: 10px;
-    cursor: pointer;
-    font-size: xx-large;
-}
-
 footer{
     padding: 15px;
     background-color:black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     color: white;
 }
 
@@ -343,19 +331,32 @@ footer{
     filter: brightness(50%);
     
 }
-
+    
 .logos{
     display: flex;
     flex-wrap: wrap;
     display: inline-block;
-} */
+}
 
 .redes { 
     display: inline-block;
 }
 
-/* .grupo {
+.grupo{
     display: inline-block;
+}
+
+.fab{
+    display: inline;
+    padding: 10px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+.logotmdb {
+    width: 50%;
+    height: 50%;
+    margin-left: 80px;
 }
 
 .volverarriba{

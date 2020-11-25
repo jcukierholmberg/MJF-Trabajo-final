@@ -164,7 +164,7 @@ footer{
     padding: 15px;
     background-color:black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     color: white;
 }
 
@@ -177,8 +177,6 @@ footer{
     filter: brightness(50%);
     
 }
-
-
     
 .logos{
     display: flex;
@@ -199,6 +197,12 @@ footer{
     padding: 10px;
     cursor: pointer;
     font-size: xx-large;
+}
+
+.logotmdb {
+    width: 50%;
+    height: 50%;
+    margin-left: 80px;
 }
 
 @media(max-width:650px){

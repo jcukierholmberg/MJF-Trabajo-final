@@ -18,14 +18,6 @@ a {
     margin-left: 40px;
 }
 
-.logotmdb {
-    position: initial;
-    margin-left: 515px;
-    margin-bottom: 100px;
-}
-
-
-
 a:hover {
     text-shadow: 0 0 10px #fff;
 }
@@ -156,7 +148,7 @@ footer{
     padding: 15px;
     background-color:black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     color: white;
 }
 
@@ -169,7 +161,7 @@ footer{
     filter: brightness(50%);
     
 }
-  
+    
 .logos{
     display: flex;
     flex-wrap: wrap;
@@ -180,7 +172,7 @@ footer{
     display: inline-block;
 }
 
-.integrantes {
+.grupo{
     display: inline-block;
 }
 
@@ -189,6 +181,12 @@ footer{
     padding: 10px;
     cursor: pointer;
     font-size: xx-large;
+}
+
+.logotmdb {
+    width: 50%;
+    height: 100%;
+    margin-left: 80px;
 }
 
 @media(max-width:1200px){
