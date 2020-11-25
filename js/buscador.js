@@ -54,15 +54,76 @@ if(queryString != ""){
             .catch( function(error){
                 console.log(error);
             }) 
-            
+    else if(tv){
+        fetch(urltv)
+            .then(function(respuesta){
+                return respuesta.json()
+            })
+
+            .then(function(data){
+                console.log(data)
+
+                let info = data;
+                let destino = document.querySelector('.container');
+
+             //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
+             destino.innerHTML += `<div class="container">
+                                    <p type="none" class="pelicula"> 
+                                    <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                    </p>
+                                    <h4> ${info[i].title} </h4>
+                                    <h5> Puntuación: ${info[i].vote_average}</h5>
+                                    <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
+                                    </div>`
+        }
+    }
+   
+    else if(person){
+        fetch(urlperson)
+            .then(function(respuesta){
+                return respuesta.json()
+            })
+
+            .then(function(data){
+                console.log(data)
+
+                let info = data;
+                let destino = document.querySelector('.container');
+
+             //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
+             destino.innerHTML += `<div class="container">
+                                    <p type="none" class="pelicula"> 
+                                    <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                    </p>
+                                    <h4> ${info[i].title} </h4>
+                                    <h5> Puntuación: ${info[i].vote_average}</h5>
+                                    <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
+                                    </div>`
+        }
+    }
+    else if(multi){
+        fetch(urlall)
+            .then(function(respuesta){
+                return respuesta.json()
+            })
+
+            .then(function(data){
+                console.log(data)
+
+                let info = data;
+                let destino = document.querySelector('.container');
+
+             //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
+             destino.innerHTML += `<div class="container">
+                                    <p type="none" class="pelicula"> 
+                                    <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                    </p>
+                                    <h4> ${info[i].title} </h4>
+                                    <h5> Puntuación: ${info[i].vote_average}</h5>
+                                    <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
+                                    </div>`
+            }
+
+    }
 }
 }
-
-
-//} else if(movie){
-    //Ejecuto fetch de mcoevi 
-        //}else if(person){
-    //Ejecuto fetch de persona 
-        //} else {
-    //Ejecuto fetch de milti
-        //}
