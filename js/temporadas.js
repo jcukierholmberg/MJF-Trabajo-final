@@ -23,6 +23,7 @@ for (let i=1; i<=episodesCount; i++) {
 
 let url= `https://api.themoviedb.org/3/tv/${id}/season/${season}/episode/${i}?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
 
+
 fetch(url)
     .then(function(respuesta){
         return respuesta.json()
@@ -33,13 +34,16 @@ fetch(url)
         // consguir la información
         let info = data.results;
         //Capturar el destino a donde insertaremos los bloques de cada peli.
-        let destino = document.querySelector('.contenedor-episodios');
+        let destino = document.querySelector('.contenedor-pelicula');
 
         //recorrer el array y por cada posición del array tenemos que crear un bloque de pelicula en html
         for(let i=0; i<10; i++){   
-            destino.innerHTML += `<div class="contenedor-episodios">
-                                    <h1> ${i} </h1>
-                                  </div>`
+            destino.innerHTML += `
+            <li type="none" class="pelicula"> 
+            <a href="pelicula.html">  <img class="foto" src="Fotos/peliculas/Thegodfather.jpeg" alt="El padrino"></a>
+            </li>
+            <h4> ${data.name} </h4>
+             <h5> 145 min</h5>  `
 
         }
         
