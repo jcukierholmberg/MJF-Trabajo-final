@@ -8,6 +8,18 @@ body {
     
 }
 
+.logo {
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.logotmdb {
+    position: initial;
+    margin-left: 515px;
+    margin-bottom: 100px;
+}
+
 a {
     cursor: pointer;
     color: white;

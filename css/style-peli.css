@@ -12,6 +12,20 @@ a {
     color: white;
 }
 
+.logo {
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.logotmdb {
+    position: initial;
+    margin-left: 515px;
+    margin-bottom: 100px;
+}
+
+
+
 a:hover {
     text-shadow: 0 0 10px #fff;
 }

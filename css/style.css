@@ -14,11 +14,11 @@ body {
     margin-left: 40px;
 }
 
-.logotmdb {
+/* .logotmdb {
     position: initial;
     margin-left: 515px;
     margin-bottom: 100px;
-}
+} */
 
 h1 {
     color: white !important;
@@ -348,13 +348,13 @@ footer{
     display: flex;
     flex-wrap: wrap;
     display: inline-block;
-}
+} */
 
 .redes { 
     display: inline-block;
 }
 
-.grupo {
+/* .grupo {
     display: inline-block;
 }
 
