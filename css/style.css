@@ -263,6 +263,7 @@ h2{
 .series-corte{
     padding: 10px;
     background-color: black;
+    color: white !important;
 }
 
 .contenedor-series:hover{
