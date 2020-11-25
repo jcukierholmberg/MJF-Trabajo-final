@@ -102,7 +102,16 @@ nav.menu {
 /* css de buscador */
 
 .editarbuscador {
-    color: white solid !important;
-    flex-wrap: nowrap;
-    border: solid 3px;
+    color: white !important;
+    /*flex-wrap: nowrap;*/
+    /*border: solid 3px;*/
+    align-self: center;
+}
+
+.botonbuscar{
+    width: 100px;
+}
+
+button{
+    width: 200px;
 }

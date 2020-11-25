@@ -27,7 +27,7 @@ let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61
 
 
 if(queryString != ""){
-    if(mediatype = "movies"){
+    if(mediatype == "movies"){
         //Ejecuto fetch de tv 
         fetch(urlmovies)
             .then(function(respuesta){
@@ -54,7 +54,9 @@ if(queryString != ""){
             .catch( function(error){
                 console.log(error);
             }) 
-    else if(tv){
+
+
+        } else if(mediatype == "tv"){
         fetch(urltv)
             .then(function(respuesta){
                 return respuesta.json()
@@ -75,10 +77,11 @@ if(queryString != ""){
                                     <h5> Puntuación: ${info[i].vote_average}</h5>
                                     <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
                                     </div>`
-        }
-    }
-   
-    else if(person){
+            })
+            .catch( function(error){
+                console.log(error);
+            }) 
+        }else if(mediatype == "person"){
         fetch(urlperson)
             .then(function(respuesta){
                 return respuesta.json()
@@ -99,9 +102,15 @@ if(queryString != ""){
                                     <h5> Puntuación: ${info[i].vote_average}</h5>
                                     <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
                                     </div>`
-        }
+        })
+            .catch( function(error){
+                console.log(error);
+            }) 
+        
+        
+        
     }
-    else if(multi){
+    else if(mediatype == "multi"){
         fetch(urlall)
             .then(function(respuesta){
                 return respuesta.json()
@@ -122,8 +131,11 @@ if(queryString != ""){
                                     <h5> Puntuación: ${info[i].vote_average}</h5>
                                     <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
                                     </div>`
-            }
+            })
+            .catch( function(error){
+                console.log(error);
+            }) 
 
     }
 }
-}
+
