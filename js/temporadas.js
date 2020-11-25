@@ -37,13 +37,13 @@ fetch(url)
         let destino = document.querySelector('.contenedor-pelicula');
 
         //recorrer el array y por cada posición del array tenemos que crear un bloque de pelicula en html
-        for(let i=0; i<10; i++){   
+        for(let j=1; j<10; j++){   
             destino.innerHTML += `
             <li type="none" class="pelicula"> 
-            <a href="pelicula.html">  <img class="foto" src="Fotos/peliculas/Thegodfather.jpeg" alt="El padrino"></a>
+            <a href="pelicula.html">  <img class="foto" src="http://image.tmdb.org/t/p/w500//${data.still_path}" alt="El padrino"></a>
             </li>
             <h4> ${data.name} </h4>
-             <h5> 145 min</h5>  `
+             <h5> ${data.episode_number} </h5>  `
 
         }
         

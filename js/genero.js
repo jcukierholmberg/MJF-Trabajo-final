@@ -74,7 +74,7 @@ fetch(urlGeneros)
 
             destino.innerHTML += `<div class="contenedor-pelicula">
                                     <h2> ${info[i].name} </h2>
-                                    <img class="foto"src="./Fotos/generos/accion/1.jpg" alt="Avengers" width="100%">
+                                    <img class="foto"src="http://image.tmdb.org/t/p/w500/${still_path[i]}" alt="Avengers" width="100%">
                                     <i class="far fa-play-circle fa-3x center"> </i>
                                     </div>`
 
