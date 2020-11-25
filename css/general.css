@@ -101,6 +101,8 @@ nav.menu {
 
 /* css de buscador */
 
-.buscador {
-    color: white;
+.editarbuscador {
+    color: white solid !important;
+    flex-wrap: nowrap;
+    border: solid 3px;
 }
