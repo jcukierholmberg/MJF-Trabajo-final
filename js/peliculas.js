@@ -16,7 +16,6 @@ let id = queryObject.get('id');
 console.log(id);
 
 let apiKey = "4aafc89b60967c61ce5438ca044af061"
-
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
 
 
