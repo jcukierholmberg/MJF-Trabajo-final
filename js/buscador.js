@@ -19,14 +19,50 @@ let id = queryObject.get('id');
 console.log(id);
 
 //DECLARAR 4 URLS CON DIFERENTES NOMBRES PARA IDENTIFICARLOS TV MOVIE PERSON Y ALL
+let urlmovies = `https://api.themoviedb.org/3/search/movie?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${id}&page=1&include_adult=false`
+let urltv = `https://api.themoviedb.org/3/search/tv?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1&query=${id}&include_adult=false`
+let urlperson = `https://api.themoviedb.org/3/search/person?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${id}&page=1&include_adult=false`
+let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${id}&page=1&include_adult=false`
+
+
+
 if(queryString != ""){
-    if(mediatype = "tv"){
+    if(mediatype = "movies"){
         //Ejecuto fetch de tv 
-    }else if(movie){
-//Ejecuto fetch de mcoevi 
-    }else if(person){
-//Ejecuto fetch de persona 
-    } else {
-//Ejecuto fetch de milti
-    }
+        fetch(urlmovies)
+            .then(function(respuesta){
+                return respuesta.json()
+            })
+
+            .then(function(data){
+                console.log(data)
+
+                let info = data;
+                let destino = document.querySelector('.container');
+
+            //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
+            destino.innerHTML += `<div class="container">
+                                <p type="none" class="pelicula"> 
+                                <a href="pelicula.html?id=${info[i].id}">  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="${info[i].title}"></a>
+                                </p>
+                                <h4> ${info[i].title} </h4>
+                                <h5> Puntuación: ${info[i].vote_average}</h5>
+                                <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-2x"></i> </a>
+                                </div>`
+
+            })
+            .catch( function(error){
+                console.log(error);
+            }) 
+            
 }
+}
+
+
+//} else if(movie){
+    //Ejecuto fetch de mcoevi 
+        //}else if(person){
+    //Ejecuto fetch de persona 
+        //} else {
+    //Ejecuto fetch de milti
+        //}

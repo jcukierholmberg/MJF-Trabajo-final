@@ -33,7 +33,6 @@ fetch(urlseries)
                                     <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
                                     <a href= "Genero.html" > Genero: ${info.genres[0].name} </a> 
                                     <p class="no-mobile"> ${info.overview} </p>
-                                    
                                 </div>`   
                                 
         for (let i=0; i<seasons.length; i++) {
