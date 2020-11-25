@@ -26,18 +26,20 @@ const queryString = new URLSearchParams(query)
 const idMovie = queryString.get("id")
 
 
-const storage =localStorage.getItem ("otraspelis")
+const storage =localStorage.getItem ("favoritos")
 console.log(storage);
 
 if (storage == null) {
-    localStorage.setItem("otraspelis" , "[]")
+    localStorage.setItem("favoritos" , "[]")
 } 
 
 
 let container = document.querySelector(".otraspelis")
+//Transformo los favoritos en un array
 let storageJs =JSON.parse(storage)
 let movies = ""
 
+//Por cada id en el array de favoritos pido su informacion
 storageJs.forEach(id => {
 
     fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=4aafc89b60967c61ce5438ca044af061`)
