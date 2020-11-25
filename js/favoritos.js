@@ -57,3 +57,21 @@ storageJs.forEach(id => {
     .catch (error=>console.log(error))
     
 });
+
+
+
+let button = document.querySelector(".favorite")
+
+button.addEventListener ("click", function() {
+    let storage =localStorage.getItem ("favoritos")
+    let storageJs= JSON.parse (storage)
+    if (!storageJs.includes(idMovie)) {
+        storageJs.push(idMovie)
+    }
+    else { 
+        storageJs = storageJs.filter(function(movie) {
+            return movie != idMovie
+        })
+    }
+    
+})
