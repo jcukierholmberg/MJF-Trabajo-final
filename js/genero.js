@@ -52,12 +52,13 @@
 //         console.log(error);
 // })
 
-let urlGeneros= `https://api.themoviedb.org/3/28/movie/list?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
+let urlgeneros = `https://api.themoviedb.org/3/genre/movie/list?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
+//let urlGeneros = `https://api.themoviedb.org/3/${results.genres_id[0]}/movie/list?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US`
 
 
 //Fetch para seccion "Peliculas mas vistas" (En nuestro HTML) //
 
-fetch(urlGeneros)
+fetch(urlgeneros)
     .then(function(respuesta){
         return respuesta.json()
     })
@@ -67,16 +68,19 @@ fetch(urlGeneros)
         // consguir la información
         let info = data.genres;
         //Capturar el destino a donde insertaremos los bloques de cada peli.
-        let destino = document.querySelector('.accion');
+        let destino = document.querySelector('.generos');
+        console.log(destino)
 
         //recorrer el array y por cada posición del array tenemos que crear un bloque de pelicula en html
         for(let i=0; i<10; i++){   
 
-            destino.innerHTML += `<div class="contenedor-pelicula">
+            destino.innerHTML += `<div class="containerContent">
                                     <h2> ${info[i].name} </h2>
-                                    <img class="foto"src="http://image.tmdb.org/t/p/w500/${still_path[i]}" alt="Avengers" width="100%">
-                                    <i class="far fa-play-circle fa-3x center"> </i>
+                                    <a href="./genresdetail.html?genres=${info[i].id}" ${info[i].id} > 
+                                    <h2 class="titulo">${info[i].name}</h2>
+                                    </a>
                                     </div>`
+                                    
 
         }
         
@@ -84,3 +88,5 @@ fetch(urlGeneros)
     .catch( function(error){
         console.log(error);
 })
+
+

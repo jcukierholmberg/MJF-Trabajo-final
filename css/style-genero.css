@@ -76,12 +76,24 @@ nav.menu {
 
 
 .generos {
-    font-size: 150%;
-    display: flex;
+    font-size: 90%;
+    /*display: flex;*/
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 150px;  
+}
+/* Detail genre */
+img.fotosDetalle {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 150px;
+}
+.portada{
+    height: 250px;
+}
+.titulo{
+    size: 5px;
 }
 
 .contenedor-pelicula {
@@ -200,6 +212,13 @@ footer{
     width: 50%;
     height: 100%;
     margin-left: 80px;
+}
+
+/* Detail genre */
+img.fotosDetalle {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 150px;
 }
 
 @media(max-width:1200px){
