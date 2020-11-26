@@ -91,6 +91,24 @@ nav.menu {
     margin-top: 200px;
 }
 
+.capitulos {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.fotoscapitulos {
+    height: 180px;
+    width: 300px;
+}
+
+.textocapitulos {
+    display: inherit;
+    text-align: center;
+}
+
+.infocapitulos{
+    padding: 40px
+}
 
 /* css de iniciiosesion */
 

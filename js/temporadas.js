@@ -34,8 +34,8 @@ fetch(url)
 
         destino.innerHTML += ` <div class="infocapitulos">
 
-                                <img src="http://image.tmdb.org/t/p/w500//${data.still_path}" alt="">
-                                <a href="">${data.name} </a>
+                                <img class = "fotoscapitulos" src="http://image.tmdb.org/t/p/w500//${data.still_path}" alt="">
+                                <a class = "textocapitulos" href="">${data.name} </a>
         
                                 </div> `
                             })

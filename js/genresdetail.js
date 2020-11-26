@@ -20,10 +20,10 @@ fetch(url)
 
         for(let i=0; i<10; i++){
         
-            destino.innerHTML += `<section class="containerContent">
-                                                <img class="portada" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="">
-                                                <a href="./pelicula.html?id=${info[i].id}&media_type=movie"> ${info[i].title} </a>
-                                        </section>`;
+            destino.innerHTML += `<div class="containerContent">
+                                                 <a href="pelicula.html?id=${info[i].id}">   <img class="portada" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt=""> </a>
+                                                <h2 class = "peligenero" href="./pelicula.html?id=${info[i].id}&media_type=movie"> ${info[i].title} </h2>
+                                        </div>`
         }
     })
 
