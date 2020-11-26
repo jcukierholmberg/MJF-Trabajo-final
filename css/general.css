@@ -91,6 +91,24 @@ nav.menu {
     margin-top: 200px;
 }
 
+.capitulos {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.fotoscapitulos {
+    height: 180px;
+    width: 300px;
+}
+
+.textocapitulos {
+    display: inherit;
+    text-align: center;
+}
+
+.infocapitulos{
+    padding: 40px
+}
 
 /* css de iniciiosesion */
 
@@ -132,3 +150,9 @@ button{
 h1{
     padding: 20px;
 }
+
+article.card-wrapper.col-sm-3 {
+    border: solid 2px black;
+    gap: 20px;
+}
+

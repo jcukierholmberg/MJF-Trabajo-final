@@ -35,8 +35,15 @@ a:hover {
 
 .containerContent{
     display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
 }
+
+
+
 h1 {
     color: white;
     text-align: center;
@@ -223,6 +230,12 @@ img.fotosDetalle {
     margin-top: 40px;
     margin-bottom: 10px;
     width: 150px;
+}
+.containerContent div {
+    flex-direction: column;
+}
+.generos .containerContent {
+    margin-top: 0;
 }
 
 @media(max-width:1200px){

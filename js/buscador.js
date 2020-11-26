@@ -42,50 +42,22 @@ if(queryString != ""){
 
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
-                console.log(container);
+                //console.log(resultados);
 
             for(let i=0; i<10; i++){
             destino.innerHTML += 
-                                `<li>
-                                    <a href="detalle/movieDetail.html?id=${info[i].id}&media_type=${info[i].media_type}">
-                                        <img class= "img-resutlado" src="https://image.tmdb.org/t/p/w500${info[i].poster_path}"
-                                
-                                
-                                `
-            //`
-                                //<div class="contenedor-pelicula">
-                                //<li type="none" class="pelicula">
-                                //</li>
-                                   // <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
-                                       //     <h4> ${info[i].title} </h4>
-                                         //   <p> ${info[i].overview}</p>
-                                        //<a href="pelicula.html?id=${info[i].id}"> Ver más </a>
-                                  //  </div>
-                                
-                            //`
+                                     `<article class="card-wrapper col-sm-3">
+                                    <div class="card my-3">
+                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                    <div class="card-body">
+                                     <h5> ${info[i].title} </h5>
+                                    <p> ${info[i].overview}</p>
+                                    <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
+                                    </div>
+                                    </div>
+                                    </article>`
 
-                            `
-                        <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
-                        <div class= "informacionpelicula" >
-                        <h2 class= "titulo" > ${info.title} </h2> 
-                        <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a> 
-                        <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
-                        <a class= "duracion" > Duración: ${info.runtime} min </a>
-                        <p class="no-mobile">${info.overview}</p>
-                        </div>
-                        `    
-        
-                            
-                           // `<article class="card-wrapper col-sm-3">
-                                //<div class="card my-3">
-                                  //  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
-                                    //    <div class="card-body">
-                                      //      <h5> ${info[i].title} </h5>
-                                        //    <p> ${info[i].overview}</p>
-                                          //  <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
-                                    //</div>
-                               // </div>
-                           // </article>`
+                           
                         }
                        
 
@@ -107,7 +79,7 @@ if(queryString != ""){
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
 
-             
+            for(let i=0; i<10; i++){
              destino.innerHTML += `<article class="card-wrapper col-sm-3">
                                         <div class="infoseries">
                                             <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
@@ -118,7 +90,9 @@ if(queryString != ""){
                                         </div>
                                     </div>
                                     </article>`
-            })
+            
+                }
+                })
             .catch( function(error){
                 console.log(error);
             }) 
@@ -135,18 +109,19 @@ if(queryString != ""){
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
 
-            
+                for(let i=0; i<10; i++){
              destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                         <div class="card my-3">
-                                            <img class="foto" src="http://image.tmdb.org/t/p/w500/${info.poster_path}" alt="...">
+                                            <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="...">
                                             <div class="card-body">
-                                                <h5> ${info.name} </h5>
-                                                <p> ${info.overview}</p>
-                                            <a href="pelicula.html?id=${info.id}"> Ver más </a>
+                                                <h5> ${info[i].name} </h5>
+                                                <p> ${info[i].overview}</p>
+                                            <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                         </div>
                                     </div>
                                     </article>`
-        })
+                }
+                                })
             .catch( function(error){
                 console.log(error);
             }) 
@@ -163,19 +138,19 @@ if(queryString != ""){
             .then(function(data){
                 console.log(data)
 
-                let info = data.result;
+                let info = data.results;
                 let destino = document.querySelector('.resultados');
 
 
-             for(let i=0; i<info.length; i++);
+             for(let i=0; i<info.length; i++){
                 if(info[i].media_type == "movie"){
                     destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                          <div class="card my-3">
                                             <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                             <div class="card-body">
-                                                <h5> ${info.title} </h5>
-                                                <p> ${info.overview}</p>
-                                                <a href="pelicula.html?id=${info.id}"> Ver más </a>
+                                                <h5> ${info[i].title} </h5>
+                                                <p> ${info[i].overview}</p>
+                                                <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                             </div>
                                         </div>
                                     </article>`
@@ -202,6 +177,7 @@ if(queryString != ""){
                                             </div>
                                             </article>`
                 }
+            }
 
             })
             .catch( function(error){
