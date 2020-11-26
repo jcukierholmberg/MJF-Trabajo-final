@@ -36,8 +36,6 @@ fetch(url)
     //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
    
    destino.innerHTML +=  `
-                        
-                    
                         <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
                         
                         <div class= "informacionpelicula" >
@@ -52,12 +50,43 @@ fetch(url)
 
                         <p class="no-mobile">${info.overview}</p>
 
-                        </div>
-                       
+                        </div>`    
 
-                        `    
+                // Empiezo a hacer que funcione el favoritos.
+
+
+                const storage =localStorage.getItem ("favoritos")
+                console.log(storage);
+
+                if (storage == null) {
+                    localStorage.setItem("favoritos" , "[]")
+                } 
+
+                let button = document.querySelector(".estrella")
+
+                button.addEventListener ("click", function(e) {
+                    e.preventDefault()
+
+                    let storage =localStorage.getItem ("favoritos")
+                    let storageJs= JSON.parse (storage)
+                    if (!storageJs.includes(id)) {
+                        storageJs.push(id)
+                        let dataFavs = JSON.stringify(storageJs)
+                        localStorage.setItem ("favoritos", dataFavs)
+                    }
+                    else { 
+                        storageJs = storageJs.filter(function(movie) {
+                            return movie != id
+                        })
+                    }
+                    
+                })
+
+
+
+
         
-                        let urlSimilares = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
+    let urlSimilares = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1`
 
     fetch(urlSimilares)
     .then(function(respuesta){
@@ -101,27 +130,5 @@ fetch(url)
 
 
 
-    `
-                        <div class="fotokillbill">
-                            <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
-                        </div>  
 
-                        <div class="infopeli">
 
-                        <h2 class= "titulo" > ${info.title}  <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a> </h2> 
-
-                        
-                        
-                        </div>
-
-                        <div class = "restoinfo" >
-
-                        <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
-
-                        <a class= "duracion" > Duración: ${info.runtime} min </a>
-
-                        <p class="no-mobile">${info.overview}</p>
-
-                        </div>
-
-                        </div>`  
