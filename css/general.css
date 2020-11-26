@@ -105,13 +105,30 @@ nav.menu {
     color: white !important;
     /*flex-wrap: nowrap;*/
     /*border: solid 3px;*/
-    align-self: center;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
 }
 
 .botonbuscar{
     width: 100px;
+    text-align: center;
+   
+}
+
+.textobuscar{
+    text-align: center;
+    margin-left: 40%;
+    width: 200px;
+
 }
 
 button{
     width: 200px;
+    text-align: center;
+    margin-left: 50%;
+}
+
+h1{
+    padding: 20px;
 }
