@@ -2,7 +2,6 @@
 
 
 //Dentro del then que procesa los datos hay que meter un if que chequee que tipo de mediatype seleccionó el usuario para mostrar todos los resultados o solo el tipo de dato elegido.
-//all => mostramos todo.
 
 let queryString = window.location.search;
 //console.log(queryString);
@@ -14,8 +13,8 @@ let queryObject = new URLSearchParams(queryString);
 //3 Obtener el dato para completar el endpoint//
 let searchData = queryObject.get('searchData');
 let mediaType = queryObject.get ('mediaType');
-//console.log(searchData);
-//console.log(mediaType);
+console.log(searchData);
+console.log(mediaType);
 
 //window.addEventListener("load", function(){
     //let spinner = document.querySelector('.loader')
@@ -45,18 +44,29 @@ if(queryString != ""){
                 let destino = document.querySelector('.container');
                 console.log(container);
 
-            //for(let i=0; i<10; i++){
-            destino.innerHTML += `
-                                <div class="contenedor-pelicula">
-                                <li type="none" class="pelicula">
-                                </li>
-                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
-                                            <h4> ${info[i].title} </h4>
-                                            <p> ${info[i].overview}</p>
-                                            <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
-                                    </div>
+            for(let i=0; i<10; i++){
+            destino.innerHTML += //`
+                                //<div class="contenedor-pelicula">
+                                //<li type="none" class="pelicula">
+                                //</li>
+                                   // <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                       //     <h4> ${info[i].title} </h4>
+                                         //   <p> ${info[i].overview}</p>
+                                        //<a href="pelicula.html?id=${info[i].id}"> Ver más </a>
+                                  //  </div>
                                 
+                            //`
                             `
+                        <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
+                        <div class= "informacionpelicula" >
+                        <h2 class= "titulo" > ${info.title} </h2> 
+                        <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a> 
+                        <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
+                        <a class= "duracion" > Duración: ${info.runtime} min </a>
+                        <p class="no-mobile">${info.overview}</p>
+                        </div>
+                        `    
+        
                             
                            // `<article class="card-wrapper col-sm-3">
                                 //<div class="card my-3">
@@ -68,11 +78,8 @@ if(queryString != ""){
                                     //</div>
                                // </div>
                            // </article>`
-                       // }
+                        }
                        
-
-
-                          
 
             })
             .catch( function(error){
@@ -158,7 +165,7 @@ if(queryString != ""){
                                          <div class="card my-3">
                                             <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                             <div class="card-body">
-                                                <h5> ${info.name} </h5>
+                                                <h5> ${info.title} </h5>
                                                 <p> ${info.overview}</p>
                                                 <a href="pelicula.html?id=${info.id}"> Ver más </a>
                                             </div>
