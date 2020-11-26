@@ -17,10 +17,10 @@ let mediaType = queryObject.get ('mediaType');
 //console.log(searchData);
 //console.log(mediaType);
 
-window.addEventListener("load", function(){
-    let spinner = document.querySelector('.loader')
-    spinner.style.display= "none"
-})
+//window.addEventListener("load", function(){
+    //let spinner = document.querySelector('.loader')
+    //spinner.style.display= "none"
+//})
 
 //DECLARAR 4 URLS CON DIFERENTES NOMBRES PARA IDENTIFICARLOS TV MOVIE PERSON Y ALL
 let urlmovies = `https://api.themoviedb.org/3/search/movie?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${searchData}&page=1&include_adult=false`
@@ -41,9 +41,11 @@ if(queryString != ""){
             .then(function(data){
                 console.log(data)
 
-                let info = data;
+                let info = data.results;
                 let destino = document.querySelector('.container');
+                console.log(container);
 
+            for(let i=0; i<info.length; i++){
             destino.innerHTML += `<article class="card-wrapper col-sm-3">
                                 <div class="card my-3">
                                     <img class="foto" src="http://image.tmdb.org/t/p/w500/${info.poster_path}" alt="...">
@@ -51,9 +53,10 @@ if(queryString != ""){
                                             <h5> ${info.title} </h5>
                                             <p> ${info.overview}</p>
                                             <a href="pelicula.html?id=${info.id}"> Ver más </a>
-                                    <   /div>
+                                    </div>
                                 </div>
                             </article>`
+                        }
                           
 
             })
@@ -71,15 +74,15 @@ if(queryString != ""){
             .then(function(data){
                 console.log(data)
 
-                let info = data;
+                let info = data.results;
                 let destino = document.querySelector('.container');
 
-             //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
+             
              destino.innerHTML += `<article class="card-wrapper col-sm-3">
                                         <div class="card my-3">
                                             <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                             <div class="card-body">
-                                                <h5> ${info[i].name} </h5>
+                                                <h5> ${info[i].original_name} </h5>
                                                 <p> ${info[i].overview}</p>
                                             <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                         </div>
@@ -99,10 +102,10 @@ if(queryString != ""){
             .then(function(data){
                 console.log(data)
 
-                let info = data;
+                let info = data.results;
                 let destino = document.querySelector('.container');
 
-             //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
+            
              destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                         <div class="card my-3">
                                             <img class="foto" src="http://image.tmdb.org/t/p/w500/${info.poster_path}" alt="...">
@@ -130,11 +133,13 @@ if(queryString != ""){
             .then(function(data){
                 console.log(data)
 
-                let info = data;
+                let info = data.result;
                 let destino = document.querySelector('.container');
 
-             //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
-             destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
+
+             for(let i=0; i<info.length; i++);
+                if(info[i].media_type == "movie"){
+                    destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                          <div class="card my-3">
                                             <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                             <div class="card-body">
@@ -144,6 +149,30 @@ if(queryString != ""){
                                             </div>
                                         </div>
                                     </article>`
+                }else if(info[i].media_type == "tv"){
+                    destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
+                                                <div class="card my-3">
+                                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                                    <div class="card-body">
+                                                        <h5> ${info[i].original_name} </h5>
+                                                        <p> ${info[i].overview}</p>
+                                                    <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
+                                                </div>
+                                            </div>
+                                            </article>`
+                }else {
+                    destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
+                                                <div class="card my-3">
+                                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="...">
+                                                    <div class="card-body">
+                                                        <h5> ${info[i].name} </h5>
+                                                        <p> ${info[i].popularity}</p>
+                                                    <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
+                                                </div>
+                                            </div>
+                                            </article>`
+                }
+
             })
             .catch( function(error){
                 console.log(error);
