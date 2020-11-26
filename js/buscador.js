@@ -23,7 +23,7 @@ let mediaType = queryObject.get ('mediaType');
 //})
 
 //DECLARAR 4 URLS CON DIFERENTES NOMBRES PARA IDENTIFICARLOS TV MOVIE PERSON Y ALL
-let urlmovies = `https://api.themoviedb.org/3/search/movie?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${searchData}&page=1&include_adult=false`
+let urlmovie = `https://api.themoviedb.org/3/search/movie?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${searchData}&page=1&include_adult=false`
 let urltv = `https://api.themoviedb.org/3/search/tv?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1&query=${searchData}&include_adult=false`
 let urlperson = `https://api.themoviedb.org/3/search/person?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${searchData}&page=1&include_adult=false`
 let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${searchData}&page=1&include_adult=false`
@@ -32,8 +32,8 @@ let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61
 
 
 if(queryString != ""){
-    if(mediaType == "movies"){
-        fetch(urlmovies)
+    if(mediaType == "movie"){
+        fetch(urlmovie)
             .then(function(respuesta){
                 return respuesta.json()
             })
@@ -45,18 +45,33 @@ if(queryString != ""){
                 let destino = document.querySelector('.container');
                 console.log(container);
 
-            for(let i=0; i<info.length; i++){
-            destino.innerHTML += `<article class="card-wrapper col-sm-3">
-                                <div class="card my-3">
-                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info.poster_path}" alt="...">
-                                        <div class="card-body">
-                                            <h5> ${info.title} </h5>
-                                            <p> ${info.overview}</p>
-                                            <a href="pelicula.html?id=${info.id}"> Ver más </a>
+            //for(let i=0; i<10; i++){
+            destino.innerHTML += `
+                                <div class="contenedor-pelicula">
+                                <li type="none" class="pelicula">
+                                </li>
+                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                            <h4> ${info[i].title} </h4>
+                                            <p> ${info[i].overview}</p>
+                                            <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                     </div>
-                                </div>
-                            </article>`
-                        }
+                                
+                            `
+                            
+                           // `<article class="card-wrapper col-sm-3">
+                                //<div class="card my-3">
+                                  //  <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                    //    <div class="card-body">
+                                      //      <h5> ${info[i].title} </h5>
+                                        //    <p> ${info[i].overview}</p>
+                                          //  <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
+                                    //</div>
+                               // </div>
+                           // </article>`
+                       // }
+                       
+
+
                           
 
             })
@@ -65,7 +80,7 @@ if(queryString != ""){
             }) 
 
 
-        } else if(mediaType == "tv"){
+        } if(mediaType == "tv"){
         fetch(urltv)
             .then(function(respuesta){
                 return respuesta.json()
@@ -79,7 +94,7 @@ if(queryString != ""){
 
              
              destino.innerHTML += `<article class="card-wrapper col-sm-3">
-                                        <div class="card my-3">
+                                        <div class="infoseries">
                                             <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                             <div class="card-body">
                                                 <h5> ${info[i].original_name} </h5>
@@ -93,7 +108,7 @@ if(queryString != ""){
                 console.log(error);
             }) 
 
-        }else if(mediaType == "person"){
+        }if(mediaType == "person"){
         fetch(urlperson)
             .then(function(respuesta){
                 return respuesta.json()
@@ -124,7 +139,7 @@ if(queryString != ""){
         
         
     }
-    else if(mediaType == "multi"){
+    if(mediaType == "all"){
         fetch(urlall)
             .then(function(respuesta){
                 return respuesta.json()
