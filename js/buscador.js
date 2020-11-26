@@ -41,11 +41,18 @@ if(queryString != ""){
                 console.log(data)
 
                 let info = data.results;
-                let destino = document.querySelector('.container');
+                let destino = document.querySelector('.resultados');
                 console.log(container);
 
             for(let i=0; i<10; i++){
-            destino.innerHTML += //`
+            destino.innerHTML += 
+                                `<li>
+                                    <a href="detalle/movieDetail.html?id=${info[i].id}&media_type=${info[i].media_type}">
+                                        <img class= "img-resutlado" src="https://image.tmdb.org/t/p/w500${info[i].poster_path}"
+                                
+                                
+                                `
+            //`
                                 //<div class="contenedor-pelicula">
                                 //<li type="none" class="pelicula">
                                 //</li>
@@ -56,6 +63,7 @@ if(queryString != ""){
                                   //  </div>
                                 
                             //`
+
                             `
                         <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
                         <div class= "informacionpelicula" >
@@ -97,7 +105,7 @@ if(queryString != ""){
                 console.log(data)
 
                 let info = data.results;
-                let destino = document.querySelector('.container');
+                let destino = document.querySelector('.resultados');
 
              
              destino.innerHTML += `<article class="card-wrapper col-sm-3">
@@ -125,7 +133,7 @@ if(queryString != ""){
                 console.log(data)
 
                 let info = data.results;
-                let destino = document.querySelector('.container');
+                let destino = document.querySelector('.resultados');
 
             
              destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
@@ -156,7 +164,7 @@ if(queryString != ""){
                 console.log(data)
 
                 let info = data.result;
-                let destino = document.querySelector('.container');
+                let destino = document.querySelector('.resultados');
 
 
              for(let i=0; i<info.length; i++);
