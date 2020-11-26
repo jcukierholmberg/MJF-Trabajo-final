@@ -77,7 +77,7 @@ fetch(urlgeneros)
             destino.innerHTML += `<div class="containerContent">
                                     <h2> ${info[i].name} </h2>
                                     <a href="./genresdetail.html?genres=${info[i].id}" ${info[i].id} > 
-                                    <h2 class="titulo">${info[i].name}</h2>
+                                    <h2 class="titulo"> ${info[i].name} </h2>
                                     </a>
                                     </div>`
                                     
