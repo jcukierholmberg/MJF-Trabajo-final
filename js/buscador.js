@@ -1,11 +1,8 @@
-//1 Obtener la querystring//
 let queryString = window.location.search;
 
-//2 Transformarla en un objeto literal//
 let queryObject = new URLSearchParams(queryString);
 //console.log(queryObject);
 
-//3 Obtener el dato para completar el endpoint//
 let searchData = queryObject.get('searchData');
 let mediaType = queryObject.get ('mediaType');
 //console.log(searchData);
@@ -16,7 +13,6 @@ window.addEventListener("load", function(){
     spinner.style.display= "none"
 })
 
-//DECLARAR 4 URLS CON DIFERENTES NOMBRES PARA IDENTIFICARLOS TV MOVIE PERSON Y ALL
 let urlmovie = `https://api.themoviedb.org/3/search/movie?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${searchData}&page=1&include_adult=false`
 let urltv = `https://api.themoviedb.org/3/search/tv?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&page=1&query=${searchData}&include_adult=false`
 let urlperson = `https://api.themoviedb.org/3/search/person?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${searchData}&page=1&include_adult=false`

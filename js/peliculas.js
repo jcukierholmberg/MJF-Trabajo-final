@@ -1,16 +1,12 @@
-//Esto es para sacar el ID para cada pelicula//
 
-//1 Obtener la querystring//
 
 let queryString = location.search;
 // console.log(queryString);
 
-//2 Transformarla en un objeto literal//
 
 let queryObject = new URLSearchParams(queryString);
 console.log(queryObject);
 
-//3 Obtener el dato para completar el endpoint//
 
 let id = queryObject.get('id');
 console.log(id);
@@ -33,7 +29,6 @@ fetch(url)
 
     let destino = document.querySelector('.infopeli');
 
-    //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
    
    destino.innerHTML +=  `
                         <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
@@ -46,7 +41,6 @@ fetch(url)
 
                         </div>`    
 
-                // Empiezo a hacer que funcione el favoritos.
 
 
                 const storage =localStorage.getItem ("favoritos")
@@ -93,7 +87,6 @@ fetch(url)
 
     let destino = document.querySelector('.otraspelis');
 
-    //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
    
     if (recomendados.results.length !=0){
    

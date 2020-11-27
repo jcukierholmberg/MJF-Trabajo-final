@@ -1,13 +1,9 @@
-//Esto es para sacar el ID para cada pelicula o serie//
-//1 Obtener la querystring//
 let queryString = location.search;
 // console.log(queryString);
 
-//2 Transformarla en un objeto literal//
 let queryObject = new URLSearchParams(queryString);
 console.log(queryObject);
 
-//3 Obtener el dato para completar el endpoint//
 let id = queryObject.get('id');
 console.log(id);
 
@@ -25,7 +21,6 @@ fetch(urlseries)
         let capitulos = data.number_of_episodes
         let destino = document.querySelector('.infoseries');
 
-        //Aca ponemos nuestro HTML de pelicula donde se va a poner la informacion// 
         destino.innerHTML += `<img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">                  
                                 <div class="informacionseries">
                                     <h2 class= "titulo"> ${info.name} </h2>
@@ -37,7 +32,6 @@ fetch(urlseries)
                                 </div>`   
                                 
         for (let i=0; i<seasons.length; i++) {
-            //pasar numero de temporada//
             sesasonsContainer.innerHTML += `<h3>${seasons[i].name}</h3>
                                             <p>${seasons[i].overview}</p>
                                             <a class="episodes" href="temporadas.html?id=${id}&season=${seasons[i].season_number}&episodesCount=${seasons[i].episode_count}"> Ver capítulos </a>` 

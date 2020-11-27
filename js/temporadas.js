@@ -1,13 +1,9 @@
-//Esto es para sacar el ID para cada pelicula o serie//
-//1 Obtener la querystring//
 let queryString = location.search;
 // console.log(queryString);
 
-//2 Transformarla en un objeto literal//
 let queryObject = new URLSearchParams(queryString);
 console.log(queryObject);
 
-//3 Obtener el dato para completar el endpoint//
 let id = queryObject.get('id');
 console.log(id);
 
@@ -27,9 +23,7 @@ fetch(url)
     
     .then(function(data){
         console.log(data)
-        // consguir la información
         
-        //Capturar el destino a donde insertaremos los bloques de cada peli.
         let destino = document.querySelector('.capitulos');
 
         destino.innerHTML += ` <div class="infocapitulos">
