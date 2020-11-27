@@ -47,15 +47,10 @@ if(queryString != ""){
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
                 
-            let imagen = document.querySelector (".fotobuscar");
-            if(data.poster_path == "undefined"){
-                imagen.src = "Imagen no diponible.";
-            }else{
-                imagen.src=`http://image.tmdb.org/t/p/w500/${info[i].poster_path}`;
-            }
+                
 
             for(let i=0; i<info.length; i++){
-            destino.innerHTML += 
+                destino.innerHTML += 
                                      `<article class="card-wrapper col-sm-3">
                                     <div class="card my-3">
                                     <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="..."  <a> href="pelicula.html?id="</a>>
@@ -95,7 +90,7 @@ if(queryString != ""){
                                             <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                             <div class="card-body">
                                                 <h5> ${info[i].original_name} </h5>
-                                                <p> ${info[i].release_date}</p>
+                                                <p> ${info[i].first_air_date}</p>
                                             <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                         </div>
                                     </div>
@@ -197,6 +192,14 @@ if(queryString != ""){
             .catch( function(error){
                 console.log(error);
             }) 
+           
+           
+            let imagen = document.querySelector (".fotobuscar");
+                if(data.poster_path == "null"){
+                    imagen.src = "Imagen no diponible.";
+                }else{
+                    imagen.src=`http://image.tmdb.org/t/p/w500/${info[i].poster_path}`;
+                }
 
     }
 }

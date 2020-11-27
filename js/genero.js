@@ -72,7 +72,7 @@ fetch(urlgeneros)
         console.log(destino)
 
         //recorrer el array y por cada posición del array tenemos que crear un bloque de pelicula en html
-        for(let i=0; i<12; i++){   
+        for(let i=0; i<10; i++){   
 
             destino.innerHTML += `<div class="containerContent">
                                     
