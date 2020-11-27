@@ -1,10 +1,5 @@
-
-
-
-//Dentro del then que procesa los datos hay que meter un if que chequee que tipo de mediatype seleccionó el usuario para mostrar todos los resultados o solo el tipo de dato elegido.
-
+//1 Obtener la querystring//
 let queryString = window.location.search;
-//console.log(queryString);
 
 //2 Transformarla en un objeto literal//
 let queryObject = new URLSearchParams(queryString);
@@ -13,8 +8,8 @@ let queryObject = new URLSearchParams(queryString);
 //3 Obtener el dato para completar el endpoint//
 let searchData = queryObject.get('searchData');
 let mediaType = queryObject.get ('mediaType');
-console.log(searchData);
-console.log(mediaType);
+//console.log(searchData);
+//console.log(mediaType);
 
 window.addEventListener("load", function(){
     let spinner = document.querySelector('.loader')
@@ -29,9 +24,7 @@ let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61
 
 
 
- let spinner = document.querySelector('.loader')
-            spinner.style.display= "block"
-//if(queryString != ""){
+
     if(mediaType == "movie"){
         fetch(urlmovie)
     
@@ -42,7 +35,7 @@ let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61
             .then(function(data){
                 console.log(data)
        
-            spinner.display= "none"
+            
 
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
@@ -195,5 +188,5 @@ let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61
         
 
     }
-//}
+
 
