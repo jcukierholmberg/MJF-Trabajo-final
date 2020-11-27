@@ -37,17 +37,11 @@ fetch(url)
    
    destino.innerHTML +=  `
                         <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
-                        
                         <div class= "informacionpelicula" >
-
                         <h2 class= "titulo" > ${info.title} </h2> 
-
                         <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a> 
-                    
                         <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
-
                         <a class= "duracion" > Duración: ${info.runtime} min </a>
-
                         <p class="no-mobile">${info.overview}</p>
 
                         </div>`    

@@ -23,7 +23,7 @@
 
 const query = location.search
 const queryString = new URLSearchParams(query)
-const idMovie = queryString.get("id")
+const id = queryString.get("id")
 
 
 let container = document.querySelector(".otraspelis")
@@ -40,21 +40,16 @@ storageJs.forEach(id => {
         
         console.log(respuesta);
                 movies = 
-                `<!-- <img class="portada" src="Fotos/peliculas/madmax.jpeg" alt="madmax">
-                            
-                <div class= "informacionpelicula" >
-    
-                    <h2 class= "titulo" > Mad madmax</h2> 
-    
-                    <a class= "estrella" href="" target="_blank"> <i class="estrellita far fa-star fa-3x"></i> </a> 
-            
-                    <h2 class = "puntuacion"> Puntuación: 8 </h2>
-    
-                    <a class= "duracion" > Duración: 137 min </a>
-    
-                    <p class="no-mobile"> </p>
-    
-                </div> --> `
+                         `
+                        <img class="portada" src="https://image.tmdb.org/t/p/w500/${info.poster_path}" alt="${info.title}">
+                        <div class= "informacionpelicula" >
+                        <h2 class= "titulo" > ${info.title} </h2> 
+                        <a class= "estrella" href="" target="_blank"> <i class="far fa-star fa-3x"></i> </a> 
+                        <h2 class "puntuacion"> Puntuación: ${info.vote_average} </h2>
+                        <a class= "duracion" > Duración: ${info.runtime} min </a>
+                        <p class="no-mobile">${info.overview}</p>
+
+                        </div>`
                             
 
                             

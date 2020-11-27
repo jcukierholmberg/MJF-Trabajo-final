@@ -33,6 +33,18 @@ a:hover {
     z-index: 999;
 }
 
+.containerContent{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 50px;
+}
+
+
+
 h1 {
     color: white;
     text-align: center;
@@ -76,12 +88,28 @@ nav.menu {
 
 
 .generos {
-    font-size: 150%;
-    display: flex;
+    font-size: 90%;
+    /*display: flex;*/
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 150px;  
+}
+/* Detail genre */
+img.fotosDetalle {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 150px;
+}
+.portada{
+    height: 250px;
+}
+.titulo{
+    size: 5px;
+}
+
+ul.resultados {
+    padding: 10px;
 }
 
 .contenedor-pelicula {
@@ -200,6 +228,19 @@ footer{
     width: 50%;
     height: 100%;
     margin-left: 80px;
+}
+
+/* Detail genre */
+img.fotosDetalle {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 150px;
+}
+.containerContent div {
+    flex-direction: column;
+}
+.generos .containerContent {
+    margin-top: 0;
 }
 
 @media(max-width:1200px){

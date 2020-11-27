@@ -91,6 +91,24 @@ nav.menu {
     margin-top: 200px;
 }
 
+.capitulos {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.fotoscapitulos {
+    height: 180px;
+    width: 300px;
+}
+
+.textocapitulos {
+    display: inherit;
+    text-align: center;
+}
+
+.infocapitulos{
+    padding: 40px
+}
 
 /* css de iniciiosesion */
 
@@ -102,7 +120,44 @@ nav.menu {
 /* css de buscador */
 
 .editarbuscador {
-    color: white solid !important;
-    flex-wrap: nowrap;
-    border: solid 3px;
+    color: white !important;
+    /*flex-wrap: nowrap;*/
+    /*border: solid 3px;*/
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
 }
+
+.botonbuscar{
+    width: 100px;
+    text-align: center;
+   
+}
+
+.textobuscar{
+    text-align: center;
+    margin-left: 40%;
+    width: 200px;
+
+}
+
+button{
+    width: 200px;
+    text-align: center;
+    margin-left: 50%;
+}
+
+h1{
+    padding: 20px;
+}
+
+article.card-wrapper.col-sm-3 {
+    border: solid 2px black;
+    gap: 20px;
+    color: antiquewhite;
+}
+.loader{
+    text-align: center;
+    size: 4px;
+}
+
