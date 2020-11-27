@@ -24,7 +24,7 @@ fetch(url)
                                                  <div> <a href="pelicula.html?id=${info[i].id}">   
                                                  <img class="portada" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt=""> </a> 
                                                  </div>
-                                                <h2> Hola hola </h2>
+                                                 <h2> ${info[i].title} </h2>
                                         </div>`
         }
     })

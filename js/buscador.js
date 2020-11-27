@@ -16,10 +16,10 @@ let mediaType = queryObject.get ('mediaType');
 console.log(searchData);
 console.log(mediaType);
 
-//window.addEventListener("load", function(){
-    //let spinner = document.querySelector('.loader')
-    //spinner.style.display= "none"
-//})
+window.addEventListener("load", function(){
+    let spinner = document.querySelector('.loader')
+    spinner.style.display= "none"
+})
 
 //DECLARAR 4 URLS CON DIFERENTES NOMBRES PARA IDENTIFICARLOS TV MOVIE PERSON Y ALL
 let urlmovie = `https://api.themoviedb.org/3/search/movie?api_key=4aafc89b60967c61ce5438ca044af061&language=en-US&query=${searchData}&page=1&include_adult=false`
@@ -29,29 +29,39 @@ let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61
 
 
 
-
+ let spinner = document.querySelector('.loader')
+            spinner.style.display= "block"
 if(queryString != ""){
     if(mediaType == "movie"){
         fetch(urlmovie)
+    
             .then(function(respuesta){
                 return respuesta.json()
             })
 
             .then(function(data){
                 console.log(data)
+       
+            spinner.display= "none"
 
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
-                //console.log(resultados);
+                
+            let imagen = document.querySelector (".fotobuscar");
+            if(data.poster_path == "undefined"){
+                imagen.src = "Imagen no diponible.";
+            }else{
+                imagen.src=`http://image.tmdb.org/t/p/w500/${info[i].poster_path}`;
+            }
 
-            for(let i=0; i<10; i++){
+            for(let i=0; i<info.length; i++){
             destino.innerHTML += 
                                      `<article class="card-wrapper col-sm-3">
                                     <div class="card my-3">
-                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="..."  <a> href="pelicula.html?id="</a>>
                                     <div class="card-body">
                                      <h5> ${info[i].title} </h5>
-                                    <p> ${info[i].overview}</p>
+                                     <p> ${info[i].release_date}</p>
                                     <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                     </div>
                                     </div>
@@ -79,13 +89,13 @@ if(queryString != ""){
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
 
-            for(let i=0; i<10; i++){
+            for(let i=0; i<info.length; i++){
              destino.innerHTML += `<article class="card-wrapper col-sm-3">
                                         <div class="infoseries">
-                                            <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                             <div class="card-body">
                                                 <h5> ${info[i].original_name} </h5>
-                                                <p> ${info[i].overview}</p>
+                                                <p> ${info[i].release_date}</p>
                                             <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                         </div>
                                     </div>
@@ -109,13 +119,13 @@ if(queryString != ""){
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
 
-                for(let i=0; i<10; i++){
+                for(let i=0; i<info.length; i++){
              destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                         <div class="card my-3">
-                                            <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="...">
+                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="...">
                                             <div class="card-body">
                                                 <h5> ${info[i].name} </h5>
-                                                <p> ${info[i].overview}</p>
+                                                <p> ${info[i].popularity}</p>
                                             <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                         </div>
                                     </div>
@@ -146,10 +156,10 @@ if(queryString != ""){
                 if(info[i].media_type == "movie"){
                     destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                          <div class="card my-3">
-                                            <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                             <div class="card-body">
                                                 <h5> ${info[i].title} </h5>
-                                                <p> ${info[i].overview}</p>
+                                                <p> ${info[i].release_date}</p>
                                                 <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                             </div>
                                         </div>
@@ -157,18 +167,18 @@ if(queryString != ""){
                 }else if(info[i].media_type == "tv"){
                     destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                                 <div class="card my-3">
-                                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
                                                     <div class="card-body">
                                                         <h5> ${info[i].original_name} </h5>
-                                                        <p> ${info[i].overview}</p>
+                                                        <p> ${info[i].release_date}</p>
                                                     <a href="pelicula.html?id=${info[i].id}"> Ver más </a>
                                                 </div>
                                             </div>
                                             </article>`
-                }else {
+                }else if(info[i].media_type == "person"){ 
                     destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                                 <div class="card my-3">
-                                                    <img class="foto" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="...">
+                                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="...">
                                                     <div class="card-body">
                                                         <h5> ${info[i].name} </h5>
                                                         <p> ${info[i].popularity}</p>
@@ -176,8 +186,12 @@ if(queryString != ""){
                                                 </div>
                                             </div>
                                             </article>`
-                }
-            }
+             }
+
+             
+
+
+             }
 
             })
             .catch( function(error){

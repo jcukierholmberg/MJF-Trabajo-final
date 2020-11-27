@@ -221,6 +221,14 @@ h2{
     height: 150px;
     border-radius: 8px;
     width: 100%;
+    margin-top: 7px;
+}
+
+.fotobuscar{
+        height: 450px;
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 7px;
 }
 
 

@@ -154,5 +154,10 @@ h1{
 article.card-wrapper.col-sm-3 {
     border: solid 2px black;
     gap: 20px;
+    color: antiquewhite;
+}
+.loader{
+    text-align: center;
+    size: 4px;
 }
 
