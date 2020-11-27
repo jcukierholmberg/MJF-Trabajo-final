@@ -50,9 +50,6 @@ storageJs.forEach(id => {
                         <p class="no-mobile">${info.overview}</p>
 
                         </div>`
-                            
-
-                            
 
                 container.innerHTML += movies;
     })

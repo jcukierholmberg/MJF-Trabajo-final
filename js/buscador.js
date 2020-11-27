@@ -54,7 +54,6 @@ let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61
                                     </div>
                                     </div>
                                     </article>`
-
                            
                         }
                        
