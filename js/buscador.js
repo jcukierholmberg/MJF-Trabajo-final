@@ -1,4 +1,4 @@
-//Traer los parametros de la url query y mediatype
+
 
 
 //Dentro del then que procesa los datos hay que meter un if que chequee que tipo de mediatype seleccionó el usuario para mostrar todos los resultados o solo el tipo de dato elegido.
@@ -31,7 +31,7 @@ let urlall = `https://api.themoviedb.org/3/search/multi?api_key=4aafc89b60967c61
 
  let spinner = document.querySelector('.loader')
             spinner.style.display= "block"
-if(queryString != ""){
+//if(queryString != ""){
     if(mediaType == "movie"){
         fetch(urlmovie)
     
@@ -49,11 +49,11 @@ if(queryString != ""){
                 
                 
 
-            for(let i=0; i<info.length; i++){
+            for(let i=0; i<10; i++){
                 destino.innerHTML += 
                                      `<article class="card-wrapper col-sm-3">
                                     <div class="card my-3">
-                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="..."  <a> href="pelicula.html?id="</a>>
+                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="No hay imagen disponible"  <a> href="pelicula.html?id="</a>>
                                     <div class="card-body">
                                      <h5> ${info[i].title} </h5>
                                      <p> ${info[i].release_date}</p>
@@ -84,10 +84,10 @@ if(queryString != ""){
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
 
-            for(let i=0; i<info.length; i++){
+            for(let i=0; i<10; i++){
              destino.innerHTML += `<article class="card-wrapper col-sm-3">
                                         <div class="infoseries">
-                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="No hay imagen disponible">
                                             <div class="card-body">
                                                 <h5> ${info[i].original_name} </h5>
                                                 <p> ${info[i].first_air_date}</p>
@@ -114,10 +114,10 @@ if(queryString != ""){
                 let info = data.results;
                 let destino = document.querySelector('.resultados');
 
-                for(let i=0; i<info.length; i++){
+                for(let i=0; i<10; i++){
              destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                         <div class="card my-3">
-                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="...">
+                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="No hay imagen disponible">
                                             <div class="card-body">
                                                 <h5> ${info[i].name} </h5>
                                                 <p> ${info[i].popularity}</p>
@@ -147,11 +147,11 @@ if(queryString != ""){
                 let destino = document.querySelector('.resultados');
 
 
-             for(let i=0; i<info.length; i++){
+             for(let i=0; i<10; i++){
                 if(info[i].media_type == "movie"){
                     destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                          <div class="card my-3">
-                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                            <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="No hay imagen disponible">
                                             <div class="card-body">
                                                 <h5> ${info[i].title} </h5>
                                                 <p> ${info[i].release_date}</p>
@@ -162,7 +162,7 @@ if(queryString != ""){
                 }else if(info[i].media_type == "tv"){
                     destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                                 <div class="card my-3">
-                                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="...">
+                                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="No hay imagen disponible">
                                                     <div class="card-body">
                                                         <h5> ${info[i].original_name} </h5>
                                                         <p> ${info[i].release_date}</p>
@@ -173,7 +173,7 @@ if(queryString != ""){
                 }else if(info[i].media_type == "person"){ 
                     destino.innerHTML +=  `<article class="card-wrapper col-sm-3">
                                                 <div class="card my-3">
-                                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="...">
+                                                    <img class="fotobuscar" src="http://image.tmdb.org/t/p/w500/${info[i].profile_path}" alt="No hay imagen disponible">
                                                     <div class="card-body">
                                                         <h5> ${info[i].name} </h5>
                                                         <p> ${info[i].popularity}</p>
@@ -192,15 +192,8 @@ if(queryString != ""){
             .catch( function(error){
                 console.log(error);
             }) 
-           
-           
-            let imagen = document.querySelector (".fotobuscar");
-                if(data.poster_path == "null"){
-                    imagen.src = "Imagen no diponible.";
-                }else{
-                    imagen.src=`http://image.tmdb.org/t/p/w500/${info[i].poster_path}`;
-                }
+        
 
     }
-}
+//}
 
